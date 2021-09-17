@@ -121,6 +121,8 @@ fun getRequiredPermissionsForGeoFencing(): List<String> =
 fun GeoTuttiViewLoaded2(status: PermsStatus) {
     val locationWhenUsingAppRationale = remember { mutableStateOf(false) }
 
+    val hasFailed = remember { mutableStateOf(false) }
+
     val locationNotUpdatedError = remember { mutableStateOf(false) }
 
     val appName = getApplicationName(LocalContext.current)
@@ -134,7 +136,11 @@ fun GeoTuttiViewLoaded2(status: PermsStatus) {
                 if (permissions.values.none { b -> !b }) {
                     // all good!
                 } else {
-                    locationNotUpdatedError.value = true
+                    if (hasFailed.value) {
+                        locationNotUpdatedError.value = true
+                    } else {
+                        hasFailed.value = true
+                    }
                 }
             }
         )
