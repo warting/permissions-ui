@@ -30,15 +30,28 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.provider.Settings
-import androidx.annotation.StringRes
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.material.CircularProgressIndicator
+import androidx.compose.material.Divider
+import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.MyLocation
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -48,7 +61,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import se.warting.blpr.R
-
 
 @Composable
 fun LocationInBackgroundTutorialView(viewModel: GeoTuttiViewModel = viewModel()) {
@@ -61,7 +73,6 @@ fun LocationInBackgroundTutorialView(viewModel: GeoTuttiViewModel = viewModel())
     }
 }
 
-
 @Composable
 fun LoadingView() {
     Column(
@@ -72,7 +83,6 @@ fun LoadingView() {
         CircularProgressIndicator()
     }
 }
-
 
 @Preview()
 @Composable
@@ -90,13 +100,11 @@ fun LocationInBackgroundTutorialViewDarkPreview() {
     }
 }
 
-
 fun getRequiredPermissionsForPreciseLocation(): List<String> =
     listOf(
         Manifest.permission.ACCESS_FINE_LOCATION,
         Manifest.permission.ACCESS_COARSE_LOCATION,
     )
-
 
 fun getRequiredPermissionsForGeoFencing(): List<String> =
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
@@ -107,16 +115,13 @@ fun getRequiredPermissionsForGeoFencing(): List<String> =
         listOf()
     }
 
-
 @Suppress("LongMethod", "ComplexMethod")
 @Composable
 @OptIn(ExperimentalMaterialApi::class)
 fun GeoTuttiViewLoaded2(status: PermsStatus) {
     val locationWhenUsingAppRationale = remember { mutableStateOf(false) }
-    val locationWhenUsingAppError = remember { mutableStateOf(false) }
 
-    val locationInBackgrondError = remember { mutableStateOf(false) }
-
+    val locationNotUpdatedError = remember { mutableStateOf(false) }
 
     val appName = getApplicationName(LocalContext.current)
 
@@ -129,7 +134,7 @@ fun GeoTuttiViewLoaded2(status: PermsStatus) {
                 if (permissions.values.none { b -> !b }) {
                     // all good!
                 } else {
-                    locationWhenUsingAppError.value = true
+                    locationNotUpdatedError.value = true
                 }
             }
         )
@@ -143,7 +148,7 @@ fun GeoTuttiViewLoaded2(status: PermsStatus) {
                 if (permissions.values.none { b -> !b }) {
                     // all good!
                 } else {
-                    locationInBackgrondError.value = true
+                    locationNotUpdatedError.value = true
                 }
             }
         )
@@ -239,31 +244,15 @@ fun GeoTuttiViewLoaded2(status: PermsStatus) {
             )
         }
 
-        if (locationWhenUsingAppError.value) {
+        if (locationNotUpdatedError.value) {
             val context = LocalContext.current
             CommonAlertDialog(
-                title = R.string.permissions_while_using_the_app_error_title,
-                text = R.string.permissions_while_using_the_app_error_description,
+                title = R.string.permissions_error_title,
+                text = R.string.permissions_error_description,
                 confirmButton = R.string.open_settings,
                 dismissButton = R.string.cancel,
                 dismiss = {
-                    locationWhenUsingAppError.value = false
-                },
-                confirm = {
-                    openSettingsForApp(context)
-                }
-            )
-        }
-
-        if (locationInBackgrondError.value) {
-            val context = LocalContext.current
-            CommonAlertDialog(
-                title = R.string.permissions_in_background_error_title,
-                text = R.string.permissions_in_background_error_description,
-                confirmButton = R.string.open_settings,
-                dismissButton = R.string.cancel,
-                dismiss = {
-                    locationInBackgrondError.value = false
+                    locationNotUpdatedError.value = false
                 },
                 confirm = {
                     openSettingsForApp(context)
@@ -287,107 +276,4 @@ fun getApplicationName(context: Context): String {
     return if (stringId == 0) applicationInfo.nonLocalizedLabel.toString() else context.getString(
         stringId
     )
-}
-
-@Composable
-fun CommonAlertDialog(
-    @StringRes title: Int,
-    @StringRes text: Int,
-    @StringRes confirmButton: Int,
-    @StringRes dismissButton: Int,
-    dismiss: () -> Unit,
-    confirm: () -> Unit
-) {
-    val appName = getApplicationName(LocalContext.current)
-
-    AlertDialog(
-        onDismissRequest = dismiss,
-        title = {
-            Text(text = stringResource(title, appName))
-        },
-        text = {
-            Text(
-                stringResource(text, appName)
-            )
-        },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    confirm()
-                    dismiss()
-                }
-            ) {
-                Text(stringResource(confirmButton))
-            }
-        },
-        dismissButton = {
-            TextButton(
-                onClick = dismiss
-            ) {
-                Text(stringResource(dismissButton))
-            }
-        }
-    )
-}
-
-@OptIn(ExperimentalMaterialApi::class)
-@Composable
-fun EnableDisabledListItem(
-    @StringRes step: Int,
-    @StringRes description: Int,
-    listState: ListState,
-    onClick: () -> Unit,
-) {
-    val iconColor = iconColorFromListState(listState)
-    val alphaFromState = alphaFromListState(listState)
-
-    val appName = getApplicationName(LocalContext.current)
-
-    CompositionLocalProvider(LocalContentAlpha provides alphaFromState) {
-        ListItem(
-            modifier = if (listState == ListState.Enabled) {
-                Modifier.clickable { onClick() }
-            } else {
-                Modifier
-            }.padding(bottom = 8.dp),
-            icon = {
-                Box(modifier = Modifier.size(40.dp), contentAlignment = Alignment.Center) {
-                    Icon(
-                        imageVector = Icons.Filled.CheckCircle, null,
-                        modifier = Modifier,
-                        tint = iconColor.copy(alpha = alphaFromState)
-                    )
-                }
-            },
-            overlineText = {
-                CompositionLocalProvider(LocalContentAlpha provides alphaFromState) {
-                    Text(stringResource(id = step))
-                }
-            },
-            trailing = if (listState != ListState.Complete) {
-                { Icon(Icons.Filled.ChevronRight, null) }
-            } else {
-                null
-            },
-            text = {
-                CompositionLocalProvider(LocalContentAlpha provides alphaFromState) {
-                    Text(stringResource(id = description, appName))
-                }
-            }
-        )
-    }
-}
-
-@Composable
-private fun iconColorFromListState(listState: ListState) = when (listState) {
-    ListState.Disabled -> MaterialTheme.colors.onBackground
-    ListState.Enabled -> MaterialTheme.colors.onBackground
-    ListState.Complete -> MaterialTheme.colors.secondaryVariant
-}
-
-@Composable
-private fun alphaFromListState(listState: ListState) = when (listState) {
-    ListState.Disabled -> ContentAlpha.disabled
-    ListState.Enabled -> ContentAlpha.medium
-    ListState.Complete -> ContentAlpha.high
 }

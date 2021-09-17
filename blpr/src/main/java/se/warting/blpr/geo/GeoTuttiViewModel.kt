@@ -25,17 +25,17 @@
 package se.warting.blpr.geo
 
 import android.Manifest
-import android.content.pm.PackageManager
 import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dev.marcelpinto.permissionktx.Permission
-import dev.marcelpinto.permissionktx.PermissionRational
 import dev.marcelpinto.permissionktx.PermissionStatus
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.launch
-
 
 enum class ListState {
     Disabled,
@@ -46,7 +46,6 @@ enum class ListState {
 data class GeoTuttiViewState(
     val projectName: ViewState<PermsStatus> = ViewState.Loading(),
 )
-
 
 data class PermsStatus(
     val fineGpsPermission: Boolean,
@@ -65,7 +64,6 @@ data class Perms(
     val backgroundGpsPermission: PermissionStatus?
 )
 
-
 class GeoTuttiViewModel : ViewModel(), StateViewModel<GeoTuttiViewState, GeoTuttiViewEffect> {
 
     private val _state =
@@ -74,13 +72,16 @@ class GeoTuttiViewModel : ViewModel(), StateViewModel<GeoTuttiViewState, GeoTutt
     override val uiState: StateFlow<GeoTuttiViewState>
         get() = _state
 
-    private val accessFineLocationPermissionFlow = Permission(Manifest.permission.ACCESS_FINE_LOCATION).statusFlow
-    private val accessCoarseLocationPermissionFlow = Permission(Manifest.permission.ACCESS_COARSE_LOCATION).statusFlow
-    private val accessBackgroundLocationPermissionFlow = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-        Permission(Manifest.permission.ACCESS_BACKGROUND_LOCATION).statusFlow
-    } else {
-        flowOf(null)
-    }
+    private val accessFineLocationPermissionFlow =
+        Permission(Manifest.permission.ACCESS_FINE_LOCATION).statusFlow
+    private val accessCoarseLocationPermissionFlow =
+        Permission(Manifest.permission.ACCESS_COARSE_LOCATION).statusFlow
+    private val accessBackgroundLocationPermissionFlow =
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            Permission(Manifest.permission.ACCESS_BACKGROUND_LOCATION).statusFlow
+        } else {
+            flowOf(null)
+        }
 
     init {
         viewModelScope.launch {
@@ -115,6 +116,4 @@ class GeoTuttiViewModel : ViewModel(), StateViewModel<GeoTuttiViewState, GeoTutt
         )
         GeoTuttiViewEffect.Loading -> oldViewState.copy(projectName = ViewState.Loading())
     }
-
-
 }

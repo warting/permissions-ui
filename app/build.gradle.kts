@@ -28,16 +28,16 @@ plugins {
 }
 
 android {
-    compileSdk=  31
+    compileSdk = 31
 
     defaultConfig {
         applicationId = "se.warting.backgroundlocationpermissionrationale"
-        minSdk = 27
-        targetSdk= 31
-        versionCode= 1
+        minSdk = 21
+        targetSdk = 31
+        versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner= "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -71,11 +71,9 @@ android {
         kotlinCompilerExtensionVersion = "1.0.2"
     }
 
-//    packagingOptions {
-//        resources {
-//            excludes += '/META-INF/{AL2.0,LGPL2.1}'
-//        }
-//    }
+    lint {
+        lintConfig = file("$rootDir/config/lint/lint.xml")
+    }
 }
 
 dependencies {
