@@ -40,7 +40,6 @@ import dev.marcelpinto.permissionktx.MultiplePermissionsLauncher
 import dev.marcelpinto.permissionktx.Permission
 import dev.marcelpinto.permissionktx.PermissionLauncher
 
-
 /**
  * A version of [ActivityResultCaller.registerForActivityResult] to use in a composable, that
  * creates a [MultiplePermissionsLauncher] using the provided list of [Permission]s.

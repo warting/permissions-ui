@@ -31,7 +31,7 @@ android {
     compileSdk = 31
 
     defaultConfig {
-        minSdk = 27
+        minSdk = 21
         targetSdk = 31
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -65,6 +65,12 @@ android {
             "-Xallow-jvm-ir-dependencies",
             "-Xskip-prerelease-check"
         )
+    }
+
+    lint {
+        lintConfig = file("$rootDir/config/lint/lint.xml")
+        lintConfig = file("$rootDir/config/lint/lint.xml")
+        //baseline(file("lint-baseline.xml"))
     }
 }
 
