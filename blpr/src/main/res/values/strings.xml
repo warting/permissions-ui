@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Stefan Wärting
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+    <string name="use_your_location_title">Use your location</string>
+    <string name="use_your_location_description">Use your location in the background to collect location while app is not used.</string>
+    <string name="use_your_location_disclaimer">%1$s will collection location data even when the app is closed or not in use.</string>
+    <string name="step1">Step 1</string>
+    <string name="permissions_while_using_the_app">Allow %1$s to use your location oncer, or while using the app</string>
+    <string name="step2">step2</string>
+    <string name="allow_allways_location_permission">Allow %1$s to use your location \'All the time\'</string>
+
+    <string name="permissions_while_using_the_app_error_title">%1$s can\'t update permissions</string>
+    <string name="permissions_while_using_the_app_error_description">Open settings to allow %1$s to use your location all the time</string>
+
+    <string name="permissions_while_using_the_app_rationale_title">%1$s need location permission</string>
+    <string name="permissions_while_using_the_app_rationale_description">You must allow location permissions before being able to enable background location permission</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="permissions_in_background_error_title">%1$s can\'t update permissions</string>
+    <string name="permissions_in_background_error_description">Open settings to allow %1$s to use your location all the time</string>
+    <string name="open_settings">Open settings</string>
+    <string name="continue_button">Continue</string>
+</resources>
