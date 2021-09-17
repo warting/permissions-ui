@@ -130,9 +130,14 @@ val androidHtmlJar by tasks.register<Jar>("androidHtmlJar") {
     archiveClassifier.set("html-doc")
 }
 
+val androidSourcesJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("sources")
+    from(android.sourceSets.getByName("main").java.srcDirs)
+}
 
 publishing {
     repositories {
+        mavenLocal()
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/warting/blpr")
@@ -150,9 +155,9 @@ publishing {
             version = libraryVersion
 
             afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
-            //artifact(tasks.getByName("androidJavadocJar"))
-            //artifact(tasks.getByName("androidHtmlJar"))
-            //artifact(tasks.getByName("androidSourcesJar"))
+            artifact(tasks.getByName("androidJavadocJar"))
+            artifact(tasks.getByName("androidHtmlJar"))
+            artifact(tasks.getByName("androidSourcesJar"))
 
             pom {
                 name.set(libraryName)
