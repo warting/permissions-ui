@@ -25,6 +25,9 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("maven-publish")
+    id("org.jetbrains.dokka") version "1.4.20"
+    id("com.gladed.androidgitversion") version "0.4.14"
 }
 
 android {
@@ -105,4 +108,99 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+}
+
+androidGitVersion {
+    tagPattern = "^v[0-9]+.*"
+}
+
+val libraryName = "blpr"
+val libraryGroup = "com.github.warting"
+val libraryVersion = androidGitVersion.name().replace("v", "")
+
+val androidJavadocJar by tasks.register<Jar>("androidJavadocJar") {
+    dependsOn(tasks.dokkaJavadoc)
+    from(tasks.dokkaJavadoc.flatMap { it.outputDirectory })
+    archiveClassifier.set("javadoc")
+}
+
+val androidHtmlJar by tasks.register<Jar>("androidHtmlJar") {
+    dependsOn(tasks.dokkaHtml)
+    from(tasks.dokkaHtml.flatMap { it.outputDirectory })
+    archiveClassifier.set("html-doc")
+}
+
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/warting/blpr")
+            credentials {
+                username = System.getenv("USERNAME")
+                password = System.getenv("TOKEN")
+            }
+        }
+    }
+    publications {
+        register<MavenPublication>("release") {
+
+            artifactId = libraryName
+            groupId = libraryGroup
+            version = libraryVersion
+
+            afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
+            //artifact(tasks.getByName("androidJavadocJar"))
+            //artifact(tasks.getByName("androidHtmlJar"))
+            //artifact(tasks.getByName("androidSourcesJar"))
+
+            pom {
+                name.set(libraryName)
+                description.set("Library to help request background permissions.")
+                url.set("https://github.com/warting/blpr/")
+
+                licenses {
+                    license {
+                        name.set("MIT License")
+                        url.set("https://github.com/warting/blpr/blob/main/LICENSE")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("warting")
+                        name.set("Stefan Wärting")
+                        email.set("stefan@warting.se")
+                    }
+                }
+                scm {
+                    connection.set("scm:git:git://github.com/warting/blpr.git")
+                    developerConnection.set("scm:git:ssh://github.com/warting/blpr.git")
+                    url.set("https://github.com/warting/blpr")
+                }
+
+                withXml {
+                    fun groovy.util.Node.addDependency(dependency: Dependency, scope: String) {
+                        appendNode("dependency").apply {
+                            appendNode("groupId", dependency.group)
+                            appendNode("artifactId", dependency.name)
+                            appendNode("version", dependency.version)
+                            appendNode("scope", scope)
+                        }
+                    }
+
+                    asNode().appendNode("dependencies").let { dependencies ->
+                        // List all "api" dependencies as "compile" dependencies
+                        configurations.api.get().dependencies.forEach {
+                            dependencies.addDependency(it, "compile")
+                        }
+                        // List all "implementation" dependencies as "runtime" dependencies
+                        configurations.implementation.get().dependencies.forEach {
+                            dependencies.addDependency(it, "runtime")
+                        }
+                    }
+                }
+            }
+
+        }
+    }
 }
