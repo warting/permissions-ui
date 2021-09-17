@@ -27,12 +27,16 @@ plugins {
     id("kotlin-android")
 }
 
+val compileTargetSdk = 31
+val minimumSdk = 27
+
 android {
-    compileSdk = 31
+
+    compileSdk = compileTargetSdk
 
     defaultConfig {
-        minSdk = 27
-        targetSdk = 31
+        minSdk = minimumSdk
+        targetSdk = compileTargetSdk
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
