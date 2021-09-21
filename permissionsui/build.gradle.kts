@@ -110,8 +110,8 @@ androidGitVersion {
     tagPattern = "^v[0-9]+.*"
 }
 
-val libraryName = "permissionui"
-val libraryGroup = "com.github.warting"
+val libraryName = "permissionsui"
+val libraryGroup = "se.warting.permissionsui"
 val libraryVersion = androidGitVersion.name().replace("v", "")
 
 val androidJavadocJar by tasks.register<Jar>("androidJavadocJar") {
@@ -174,8 +174,8 @@ publishing {
                     }
                 }
                 scm {
-                    connection.set("scm:git:git://github.com/warting/permissionui.git")
-                    developerConnection.set("scm:git:ssh://github.com/warting/permissionui.git")
+                    connection.set("scm:git:git://github.com/warting/permissionsui.git")
+                    developerConnection.set("scm:git:ssh://github.com/warting/permissionsui.git")
                     url.set("https://github.com/warting/permission-ui")
                 }
 

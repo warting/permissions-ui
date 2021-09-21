@@ -31,4 +31,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Background Location Permission Rationale"
-include(":app", ":permissionui")
+include(":app", ":permissionsui")

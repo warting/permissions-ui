@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package se.warting.permissionui.backgroundlocation
+package se.warting.permissionsui.backgroundlocation
 
 import android.Manifest
 import android.content.Context
@@ -66,7 +66,7 @@ import dev.marcelpibi.permissionktx.compose.rememberLauncherForPermissionsResult
 import dev.marcelpinto.permissionktx.Permission
 import dev.marcelpinto.permissionktx.PermissionRational
 import dev.marcelpinto.permissionktx.PermissionStatus
-import se.warting.permissionui.R
+import se.warting.permissionsui.R
 
 @Composable
 fun LocationInBackgroundTutorialView(

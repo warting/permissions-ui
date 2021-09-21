@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package se.warting.permissionui.backgroundlocation
+package se.warting.permissionsui.backgroundlocation
 
 import android.Manifest
 import android.os.Build

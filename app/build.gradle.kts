@@ -31,7 +31,7 @@ android {
     compileSdk = 31
 
     defaultConfig {
-        applicationId = "se.warting.permissionui"
+        applicationId = "se.warting.permissionsui"
         minSdk = 21
         targetSdk = 31
         versionCode = 1
@@ -80,7 +80,7 @@ dependencies {
 
     val compose_version = "1.0.1"
     implementation("androidx.core:core-ktx:1.6.0")
-    implementation(project(":permissionui"))
+    implementation(project(":permissionsui"))
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.compose.ui:ui:$compose_version")
