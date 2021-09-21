@@ -82,7 +82,7 @@ dependencies {
     val composeVersion = "1.0.2"
 
 
-    implementation("dev.marcelpinto.permissions:permissions-ktx:0.7")
+    implementation("dev.marcelpinto:permissions-compose-ktx:0.9")
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0-beta01")
     implementation("androidx.compose.runtime:runtime:$composeVersion")
