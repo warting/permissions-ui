@@ -26,9 +26,22 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("maven-publish")
+    id("signing")
     id("org.jetbrains.dokka") version "1.5.30"
     id("com.gladed.androidgitversion") version "0.4.14"
 }
+
+
+androidGitVersion {
+    tagPattern = "^v[0-9]+.*"
+}
+
+
+val PUBLISH_GROUP_ID: String by extra("permissionsui")
+val PUBLISH_VERSION: String by extra("se.warting.permissionsui")
+val PUBLISH_ARTIFACT_ID by extra(androidGitVersion.name().replace("v", ""))
+
+apply(from = "${rootProject.projectDir}/gradle/publish-module.gradle")
 
 android {
     compileSdk = 31
@@ -106,102 +119,4 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 }
 
-androidGitVersion {
-    tagPattern = "^v[0-9]+.*"
-}
 
-val libraryName = "permissionsui"
-val libraryGroup = "se.warting.permissionsui"
-val libraryVersion = androidGitVersion.name().replace("v", "")
-
-val androidJavadocJar by tasks.register<Jar>("androidJavadocJar") {
-    dependsOn(tasks.dokkaJavadoc)
-    from(tasks.dokkaJavadoc.flatMap { it.outputDirectory })
-    archiveClassifier.set("javadoc")
-}
-
-val androidHtmlJar by tasks.register<Jar>("androidHtmlJar") {
-    dependsOn(tasks.dokkaHtml)
-    from(tasks.dokkaHtml.flatMap { it.outputDirectory })
-    archiveClassifier.set("html-doc")
-}
-
-val androidSourcesJar by tasks.registering(Jar::class) {
-    archiveClassifier.set("sources")
-    from(android.sourceSets.getByName("main").java.srcDirs)
-}
-
-publishing {
-    repositories {
-        mavenLocal()
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/warting/permission-ui")
-            credentials {
-                username = System.getenv("USERNAME")
-                password = System.getenv("TOKEN")
-            }
-        }
-    }
-    publications {
-        register<MavenPublication>("release") {
-
-            artifactId = libraryName
-            groupId = libraryGroup
-            version = libraryVersion
-
-            afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
-            artifact(tasks.getByName("androidJavadocJar"))
-            artifact(tasks.getByName("androidHtmlJar"))
-            artifact(tasks.getByName("androidSourcesJar"))
-
-            pom {
-                name.set(libraryName)
-                description.set("Library to help request background permissions.")
-                url.set("https://github.com/warting/permission-ui/")
-
-                licenses {
-                    license {
-                        name.set("MIT License")
-                        url.set("https://github.com/warting/permission-ui/blob/main/LICENSE")
-                    }
-                }
-                developers {
-                    developer {
-                        id.set("warting")
-                        name.set("Stefan Wärting")
-                        email.set("stefan@warting.se")
-                    }
-                }
-                scm {
-                    connection.set("scm:git:git://github.com/warting/permissionsui.git")
-                    developerConnection.set("scm:git:ssh://github.com/warting/permissionsui.git")
-                    url.set("https://github.com/warting/permission-ui")
-                }
-
-                withXml {
-                    fun groovy.util.Node.addDependency(dependency: Dependency, scope: String) {
-                        appendNode("dependency").apply {
-                            appendNode("groupId", dependency.group)
-                            appendNode("artifactId", dependency.name)
-                            appendNode("version", dependency.version)
-                            appendNode("scope", scope)
-                        }
-                    }
-
-                    asNode().appendNode("dependencies").let { dependencies ->
-                        // List all "api" dependencies as "compile" dependencies
-                        configurations.api.get().dependencies.forEach {
-                            dependencies.addDependency(it, "compile")
-                        }
-                        // List all "implementation" dependencies as "runtime" dependencies
-                        configurations.implementation.get().dependencies.forEach {
-                            dependencies.addDependency(it, "runtime")
-                        }
-                    }
-                }
-            }
-
-        }
-    }
-}
