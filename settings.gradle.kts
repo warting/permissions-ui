@@ -27,7 +27,6 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven(url = "https://premex.jfrog.io/artifactory/premex/")
     }
 }
 rootProject.name = "Background Location Permission Rationale"
