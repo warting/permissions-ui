@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package se.warting.blpr.geo
+package se.warting.permissionui.backgroundlocation
 
 import android.Manifest
 import android.content.Context
@@ -66,7 +66,7 @@ import dev.marcelpibi.permissionktx.compose.rememberLauncherForPermissionsResult
 import dev.marcelpinto.permissionktx.Permission
 import dev.marcelpinto.permissionktx.PermissionRational
 import dev.marcelpinto.permissionktx.PermissionStatus
-import se.warting.blpr.R
+import se.warting.permissionui.R
 
 @Composable
 fun LocationInBackgroundTutorialView(
@@ -220,7 +220,7 @@ fun GeoTuttiViewLoaded(
                     if (status.coarseGpsPermission.isRationaleRequired() ||
                         status.fineGpsPermission.isRationaleRequired()
                     ) {
-                        ListState.Enabled_Rationale
+                        ListState.EnabledRationale
                     } else {
                         ListState.Enabled
                     }
@@ -244,7 +244,7 @@ fun GeoTuttiViewLoaded(
                     ListState.Complete
                 } else if (whileUsingAppState == ListState.Complete) {
                     if (status.backgroundGpsPermission.isRationaleRequired()) {
-                        ListState.Enabled_Rationale
+                        ListState.EnabledRationale
                     } else {
                         ListState.Enabled
                     }

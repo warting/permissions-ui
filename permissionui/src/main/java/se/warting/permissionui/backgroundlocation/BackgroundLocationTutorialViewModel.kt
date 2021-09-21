@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package se.warting.blpr.geo
+package se.warting.permissionui.backgroundlocation
 
 import android.Manifest
 import android.os.Build
@@ -40,7 +40,7 @@ import kotlinx.coroutines.launch
 enum class ListState {
     Disabled,
     Enabled,
-    Enabled_Rationale,
+    EnabledRationale,
     Complete,
 }
 
