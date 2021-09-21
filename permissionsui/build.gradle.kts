@@ -37,9 +37,9 @@ androidGitVersion {
 }
 
 
-val PUBLISH_GROUP_ID: String by extra("permissionsui")
-val PUBLISH_VERSION: String by extra("se.warting.permissionsui")
-val PUBLISH_ARTIFACT_ID by extra(androidGitVersion.name().replace("v", ""))
+val PUBLISH_GROUP_ID: String by extra("se.warting.permissionsui")
+val PUBLISH_VERSION: String by extra(androidGitVersion.name().replace("v", ""))
+val PUBLISH_ARTIFACT_ID by extra("permissionsui")
 
 apply(from = "${rootProject.projectDir}/gradle/publish-module.gradle")
 
