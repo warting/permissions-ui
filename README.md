@@ -1,14 +1,16 @@
-# Background Location Permission Rationale (Blpr)
+# Permission UI
 
-Jetpack Compose module to easy request background location permission in a intuitive way.
+A set of Android-UI components to make it easier to request permission in a user friendly way.
 
-Until this package is deployed to maven central this can be accessed from our private maven repository 
+## Access background location 
+A jetpack compose module to easy request background location permission in a intuitive way.
 
-
-![Screenshots](screenshot/screens.png)
-
+| Happy case | Rationale case | Worst case |
+| --- | --- | --- |
+| ![happy case gif](screenshot/sdk10_happy_case.gif) | ![rationale case gif](screenshot/sdk10_rationale_case.gif) | ![worst case gif](screenshot/sdk10_worst_case.gif) |
 
 ## Add Maven repository
+Until this package is deployed to maven central this can be accessed from our private maven repository
 ```
 repositories {
     maven(url = "https://premex.jfrog.io/artifactory/premex/")
@@ -29,7 +31,7 @@ LocationInBackgroundTutorialView()
 ```
 
 
-Complete example:
+Example:
 ```
 import se.warting.blpr.geo.LocationInBackgroundTutorialView
 
@@ -46,6 +48,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 ```
+For a full implementation see: [Full sample](app/src/main/java/se/warting/backgroundlocationpermissionrationale/MainActivity.kt)
 
 ## Notes
 This Library adds the following permissions to your app: 

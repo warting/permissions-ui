@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.dp
 fun EnableDisabledListItem(
     @StringRes step: Int,
     @StringRes description: Int,
+    @StringRes rationale: Int,
     listState: ListState,
     onClick: () -> Unit,
 ) {
@@ -38,7 +39,7 @@ fun EnableDisabledListItem(
 
     CompositionLocalProvider(LocalContentAlpha provides alphaFromState) {
         ListItem(
-            modifier = if (listState == ListState.Enabled) {
+            modifier = if (listState == ListState.Enabled || listState == ListState.Enabled_Rationale) {
                 Modifier.clickable { onClick() }
             } else {
                 Modifier
@@ -57,7 +58,12 @@ fun EnableDisabledListItem(
                     Text(stringResource(id = step))
                 }
             },
-            trailing = if (listState != ListState.Complete) {
+            secondaryText = if (listState == ListState.Enabled_Rationale) {
+                { Text(stringResource(id = rationale)) }
+            } else {
+                null
+            },
+            trailing = if (listState == ListState.Enabled || listState == ListState.Enabled_Rationale) {
                 { Icon(Icons.Filled.ChevronRight, null) }
             } else {
                 null
@@ -75,6 +81,7 @@ fun EnableDisabledListItem(
 private fun iconColorFromListState(listState: ListState) = when (listState) {
     ListState.Disabled -> MaterialTheme.colors.onBackground
     ListState.Enabled -> MaterialTheme.colors.onBackground
+    ListState.Enabled_Rationale -> MaterialTheme.colors.onBackground
     ListState.Complete -> MaterialTheme.colors.secondaryVariant
 }
 
@@ -82,5 +89,6 @@ private fun iconColorFromListState(listState: ListState) = when (listState) {
 private fun alphaFromListState(listState: ListState) = when (listState) {
     ListState.Disabled -> ContentAlpha.disabled
     ListState.Enabled -> ContentAlpha.medium
+    ListState.Enabled_Rationale -> ContentAlpha.medium
     ListState.Complete -> ContentAlpha.high
 }
