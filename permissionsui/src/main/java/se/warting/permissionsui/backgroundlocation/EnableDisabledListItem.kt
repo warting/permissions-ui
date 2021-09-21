@@ -1,4 +1,4 @@
-package se.warting.permissionui.backgroundlocation
+package se.warting.permissionsui.backgroundlocation
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.clickable

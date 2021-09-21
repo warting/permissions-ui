@@ -38,7 +38,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import kotlinx.coroutines.launch
 import se.warting.backgroundlocationpermissionrationale.ui.theme.BackgroundLocationPermissionRationaleTheme
-import se.warting.permissionui.backgroundlocation.LocationInBackgroundTutorialView
+import se.warting.permissionsui.backgroundlocation.LocationInBackgroundTutorialView
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
