@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package se.warting.blpr.geo
+package se.warting.permissionui.backgroundlocation
 
 sealed class ViewState<T> {
     class Loading<T> : ViewState<T>()

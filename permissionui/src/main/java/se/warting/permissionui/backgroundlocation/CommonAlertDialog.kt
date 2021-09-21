@@ -1,4 +1,4 @@
-package se.warting.blpr.geo
+package se.warting.permissionui.backgroundlocation
 
 import androidx.annotation.StringRes
 import androidx.compose.material.AlertDialog

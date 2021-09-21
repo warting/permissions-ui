@@ -1,4 +1,4 @@
-package se.warting.blpr.geo
+package se.warting.permissionui.backgroundlocation
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.clickable
@@ -39,7 +39,7 @@ fun EnableDisabledListItem(
 
     CompositionLocalProvider(LocalContentAlpha provides alphaFromState) {
         ListItem(
-            modifier = if (listState == ListState.Enabled || listState == ListState.Enabled_Rationale) {
+            modifier = if (listState == ListState.Enabled || listState == ListState.EnabledRationale) {
                 Modifier.clickable { onClick() }
             } else {
                 Modifier
@@ -58,12 +58,12 @@ fun EnableDisabledListItem(
                     Text(stringResource(id = step))
                 }
             },
-            secondaryText = if (listState == ListState.Enabled_Rationale) {
+            secondaryText = if (listState == ListState.EnabledRationale) {
                 { Text(stringResource(id = rationale)) }
             } else {
                 null
             },
-            trailing = if (listState == ListState.Enabled || listState == ListState.Enabled_Rationale) {
+            trailing = if (listState == ListState.Enabled || listState == ListState.EnabledRationale) {
                 { Icon(Icons.Filled.ChevronRight, null) }
             } else {
                 null
@@ -81,7 +81,7 @@ fun EnableDisabledListItem(
 private fun iconColorFromListState(listState: ListState) = when (listState) {
     ListState.Disabled -> MaterialTheme.colors.onBackground
     ListState.Enabled -> MaterialTheme.colors.onBackground
-    ListState.Enabled_Rationale -> MaterialTheme.colors.onBackground
+    ListState.EnabledRationale -> MaterialTheme.colors.onBackground
     ListState.Complete -> MaterialTheme.colors.secondaryVariant
 }
 
@@ -89,6 +89,6 @@ private fun iconColorFromListState(listState: ListState) = when (listState) {
 private fun alphaFromListState(listState: ListState) = when (listState) {
     ListState.Disabled -> ContentAlpha.disabled
     ListState.Enabled -> ContentAlpha.medium
-    ListState.Enabled_Rationale -> ContentAlpha.medium
+    ListState.EnabledRationale -> ContentAlpha.medium
     ListState.Complete -> ContentAlpha.high
 }

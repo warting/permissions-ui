@@ -110,7 +110,7 @@ androidGitVersion {
     tagPattern = "^v[0-9]+.*"
 }
 
-val libraryName = "blpr"
+val libraryName = "permissionui"
 val libraryGroup = "com.github.warting"
 val libraryVersion = androidGitVersion.name().replace("v", "")
 
@@ -136,7 +136,7 @@ publishing {
         mavenLocal()
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/warting/blpr")
+            url = uri("https://maven.pkg.github.com/warting/permission-ui")
             credentials {
                 username = System.getenv("USERNAME")
                 password = System.getenv("TOKEN")
@@ -158,12 +158,12 @@ publishing {
             pom {
                 name.set(libraryName)
                 description.set("Library to help request background permissions.")
-                url.set("https://github.com/warting/blpr/")
+                url.set("https://github.com/warting/permission-ui/")
 
                 licenses {
                     license {
                         name.set("MIT License")
-                        url.set("https://github.com/warting/blpr/blob/main/LICENSE")
+                        url.set("https://github.com/warting/permission-ui/blob/main/LICENSE")
                     }
                 }
                 developers {
@@ -174,9 +174,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection.set("scm:git:git://github.com/warting/blpr.git")
-                    developerConnection.set("scm:git:ssh://github.com/warting/blpr.git")
-                    url.set("https://github.com/warting/blpr")
+                    connection.set("scm:git:git://github.com/warting/permissionui.git")
+                    developerConnection.set("scm:git:ssh://github.com/warting/permissionui.git")
+                    url.set("https://github.com/warting/permission-ui")
                 }
 
                 withXml {

@@ -20,7 +20,7 @@ repositories {
 ## Download
 ```
 dependencies {
-    implementation("com.github.warting:blpr:<latest_version>")
+    implementation("com.github.warting:permissionui:<latest_version>")
 }
 ```
 
@@ -33,7 +33,7 @@ LocationInBackgroundTutorialView()
 
 Example:
 ```
-import se.warting.blpr.geo.LocationInBackgroundTutorialView
+import se.warting.permissionui.backgroundlocation.LocationInBackgroundTutorialView
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
