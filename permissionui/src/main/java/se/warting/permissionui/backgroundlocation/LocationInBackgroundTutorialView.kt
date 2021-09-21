@@ -67,6 +67,7 @@ import dev.marcelpinto.permissionktx.Permission
 import dev.marcelpinto.permissionktx.PermissionRational
 import dev.marcelpinto.permissionktx.PermissionStatus
 import se.warting.permissionui.R
+import se.warting.permissionui.ViewState
 
 @Composable
 fun LocationInBackgroundTutorialView(

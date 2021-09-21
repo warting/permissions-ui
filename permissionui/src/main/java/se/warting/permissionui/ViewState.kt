@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package se.warting.permissionui.backgroundlocation
+package se.warting.permissionui
 
 sealed class ViewState<T> {
     class Loading<T> : ViewState<T>()
