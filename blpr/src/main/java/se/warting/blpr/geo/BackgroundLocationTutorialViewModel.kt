@@ -40,36 +40,32 @@ import kotlinx.coroutines.launch
 enum class ListState {
     Disabled,
     Enabled,
+    Enabled_Rationale,
     Complete,
 }
 
-data class GeoTuttiViewState(
-    val projectName: ViewState<PermsStatus> = ViewState.Loading(),
+data class BackgroundLocationTutorialViewState(
+    val projectName: ViewState<RequiredPermissions> = ViewState.Loading(),
 )
 
-data class PermsStatus(
-    val fineGpsPermission: Boolean,
-    val coarseGpsPermission: Boolean,
-    val backgroundGpsPermission: Boolean?
-)
-
-sealed class GeoTuttiViewEffect {
-    class StatusUpdated(val statuses: Perms) : GeoTuttiViewEffect()
-    object Loading : GeoTuttiViewEffect()
+sealed class BackgroundLocationTutorialViewEffect {
+    class StatusUpdated(val statuses: RequiredPermissions) : BackgroundLocationTutorialViewEffect()
+    object Loading : BackgroundLocationTutorialViewEffect()
 }
 
-data class Perms(
+data class RequiredPermissions(
     val fineGpsPermission: PermissionStatus,
     val coarseGpsPermission: PermissionStatus,
     val backgroundGpsPermission: PermissionStatus?
 )
 
-class GeoTuttiViewModel : ViewModel(), StateViewModel<GeoTuttiViewState, GeoTuttiViewEffect> {
+class BackgroundLocationTutorialViewModel : ViewModel(),
+    StateViewModel<BackgroundLocationTutorialViewState, BackgroundLocationTutorialViewEffect> {
 
     private val _state =
-        MutableStateFlow(GeoTuttiViewState(projectName = ViewState.Loading()))
+        MutableStateFlow(BackgroundLocationTutorialViewState(projectName = ViewState.Loading()))
 
-    override val uiState: StateFlow<GeoTuttiViewState>
+    override val uiState: StateFlow<BackgroundLocationTutorialViewState>
         get() = _state
 
     private val accessFineLocationPermissionFlow =
@@ -91,29 +87,21 @@ class GeoTuttiViewModel : ViewModel(), StateViewModel<GeoTuttiViewState, GeoTutt
                 accessCoarseLocationPermissionFlow,
                 accessBackgroundLocationPermissionFlow
             ) { a, b, c ->
-                Perms(a, b, c)
+                RequiredPermissions(a, b, c)
             }.collect {
                 _state.value =
-                    reduce(_state.value, GeoTuttiViewEffect.StatusUpdated(it))
+                    reduce(_state.value, BackgroundLocationTutorialViewEffect.StatusUpdated(it))
             }
         }
     }
 
-    private fun mapit(perms: Perms): PermsStatus {
-        return PermsStatus(
-            perms.fineGpsPermission.isGranted(),
-            perms.coarseGpsPermission.isGranted(),
-            perms.backgroundGpsPermission?.isGranted()
-        )
-    }
-
     override fun reduce(
-        oldViewState: GeoTuttiViewState,
-        viewEffect: GeoTuttiViewEffect,
+        oldViewState: BackgroundLocationTutorialViewState,
+        viewEffect: BackgroundLocationTutorialViewEffect,
     ) = when (viewEffect) {
-        is GeoTuttiViewEffect.StatusUpdated -> oldViewState.copy(
-            projectName = ViewState.Success(mapit(viewEffect.statuses)),
+        is BackgroundLocationTutorialViewEffect.StatusUpdated -> oldViewState.copy(
+            projectName = ViewState.Success(viewEffect.statuses),
         )
-        GeoTuttiViewEffect.Loading -> oldViewState.copy(projectName = ViewState.Loading())
+        BackgroundLocationTutorialViewEffect.Loading -> oldViewState.copy(projectName = ViewState.Loading())
     }
 }

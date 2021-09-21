@@ -28,17 +28,15 @@
     <string name="use_your_location_disclaimer">%1$s will collection location data even when the app is closed or not in use.</string>
     <string name="step1">Step 1</string>
     <string name="permissions_while_using_the_app">Allow %1$s to use your location once, or while using the app</string>
+    <string name="permissions_while_using_the_app_rationale">Before we are able to ask for background permission we first require your location at least once.</string>
     <string name="step2">step2</string>
     <string name="allow_allways_location_permission">Allow %1$s to use your location ‘All the time’</string>
+    <string name="allow_allways_location_permission_rationale">You must allow ‘All the time’ if we should be able to track your location while not using the app.</string>
 
     <string name="permissions_error_title">%1$s can\'t update permissions</string>
     <string name="permissions_error_description">Open settings to allow %1$s to use your location all the time</string>
 
-    <string name="permissions_while_using_the_app_rationale_title">%1$s need location permission</string>
-    <string name="permissions_while_using_the_app_rationale_description">You must allow location permissions before being able to enable background location permission</string>
-
     <string name="cancel">Cancel</string>
 
     <string name="open_settings">Open settings</string>
-    <string name="continue_button">Continue</string>
 </resources>
