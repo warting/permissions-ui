@@ -1,3 +1,5 @@
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/se.warting.permissionsui/permissionsui/badge.png)](https://maven-badges.herokuapp.com/maven-central/se.warting.permissionsui/permissionsui)
+
 # Permission UI
 
 A set of Android-UI components to make it easier to request permission in a user friendly way.
@@ -9,25 +11,30 @@ A jetpack compose module to easy request background location permission in a int
 | --- | --- | --- |
 | ![happy case gif](screenshot/sdk10_happy_case.gif) | ![rationale case gif](screenshot/sdk10_rationale_case.gif) | ![worst case gif](screenshot/sdk10_worst_case.gif) |
 
-## Add Maven repository
-Until this package is deployed to maven central this can be accessed from our private maven repository
+## How to include in your project
+The library is available via MavenCentral:
 ```
-repositories {
-    maven(url = "https://premex.jfrog.io/artifactory/premex/")
+allprojects {
+    repositories {
+        // ...
+        mavenCentral()
+    }
 }
 ```
 
-## Download
+Add it to your module dependencies:
 ```
 dependencies {
-    implementation("com.github.warting:permissionsui:<latest_version>")
+    implementation("se.warting.permissionsui:permissionsui:<latest_version>")
 }
 ```
 
 ## How to use
 All you need to do is to call `LocationInBackgroundTutorialView`:
 ```
-LocationInBackgroundTutorialView()
+LocationInBackgroundTutorialView() {
+    // Permissions granted 
+}
 ```
 
 
@@ -41,7 +48,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             BackgroundLocationPermissionRationaleTheme {
                 Surface(color = MaterialTheme.colors.background) {
-                    LocationInBackgroundTutorialView()
+                    LocationInBackgroundTutorialView() {
+                        // Permissions granted 
+                    }
                 }
             }
         }
