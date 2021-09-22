@@ -5,10 +5,7 @@ A set of Android-UI components to make it easier to request permission in a user
 ## Access background location 
 A jetpack compose module to easy request background location permission in a intuitive way.
 
-| SDK | Happy case | Rationale case | Worst case |
-| --- | --- | --- | --- |
-| 10 | ![happy case gif](screenshot/sdk10_happy_case.gif) | ![rationale case gif](screenshot/sdk10_rationale_case.gif) | ![worst case gif](screenshot/sdk10_worst_case.gif) |
-| 12 | ![happy case gif](screenshot/sdk12_happy_case.gif) | ![rationale case gif](screenshot/sdk12_rationale_case.gif) | ![worst case gif](screenshot/sdk12_worst_case.gif) |
+![happy case gif](screenshot/sdk12_happy_case.gif)
 
 ## Add Maven repository
 Until this package is deployed to maven central this can be accessed from our private maven repository
@@ -57,6 +54,11 @@ This Library adds the following permissions to your app:
 - android.permission.ACCESS_FINE_LOCATION
 - android.permission.ACCESS_BACKGROUND_LOCATION
 
+## Samples
+| SDK | Happy case | Rationale case | Worst case |
+| --- | --- | --- | --- |
+| 10 | ![happy case gif](screenshot/sdk10_happy_case.gif) | ![rationale case gif](screenshot/sdk10_rationale_case.gif) | ![worst case gif](screenshot/sdk10_worst_case.gif) |
+| 12 | ![happy case gif](screenshot/sdk12_happy_case.gif) | ![rationale case gif](screenshot/sdk12_rationale_case.gif) | ![worst case gif](screenshot/sdk12_worst_case.gif) |
 
 ## License
 ```
