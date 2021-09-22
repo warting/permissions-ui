@@ -68,6 +68,8 @@ import dev.marcelpinto.permissionktx.PermissionRational
 import dev.marcelpinto.permissionktx.PermissionStatus
 import se.warting.permissionsui.R
 
+private const val PERMANENT_DENIED_TIMEOUT = 500
+
 @Composable
 fun LocationInBackgroundTutorialView(
     modifier: Modifier = Modifier,
@@ -105,6 +107,7 @@ fun LocationInBackgroundTutorialViewDarkPreview() {
         Surface {
             GeoTuttiViewLoaded(
                 status = RequiredPermissions(
+                    permissionsNeededForFineLocation = getRequiredPermissionsForPreciseLocation(),
                     fineGpsPermission = PermissionStatus.Granted(Permission("")),
                     coarseGpsPermission = PermissionStatus.Granted(Permission("")),
                     backgroundGpsPermission = PermissionStatus.Granted(Permission("")),
@@ -142,30 +145,44 @@ fun GeoTuttiViewLoaded(
 
     val appName = getApplicationName(LocalContext.current)
 
+    var requestedTime = 0L
     fun onPermissionResult(permissions: Map<Permission, Boolean>) {
         // check if any permission was approved
         // we only require one of precise or cource location
         // while requesting background we have only one
         if (permissions.values.all { permissionApproved -> permissionApproved }) {
             // all good!
-            Log.d("GeoTuttiViewLoaded", "Permissions: " + permissions.values.toString())
-        } else {
-            // Some permissions is still not approved
+            Log.d(
+                "GeoTuttiViewLoaded",
+                "All permissions approved: " + permissions.values.toString()
+            )
+        } else if (permissions.values.none { permissionApproved -> permissionApproved }) {
+            // none was approved!
+            Log.d("GeoTuttiViewLoaded", "No permissions approved: " + permissions.values.toString())
 
             // true if all of the permissions require a rationale (false = Permanent denied??)
             val requireRationale =
                 permissions.keys.all { it.status.isRationaleRequired() }
 
             if (!requireRationale) {
-                locationNotUpdatedError.value = true
+                val timeSinceClicked = System.currentTimeMillis() - requestedTime
+                if (timeSinceClicked < PERMANENT_DENIED_TIMEOUT) {
+                    // Permanent denied
+                    locationNotUpdatedError.value = true
+                }
             }
+        } else {
+            Log.d(
+                "GeoTuttiViewLoaded",
+                "Some permissions approved: " + permissions.values.toString()
+            )
         }
     }
 
     // Register the permission launcher
     val locationWhileUsingApppermissionLauncher =
         rememberLauncherForPermissionsResult(
-            types = getRequiredPermissionsForPreciseLocation().toTypedArray(),
+            types = status.permissionsNeededForFineLocation.toTypedArray(),
             onResult = ::onPermissionResult
         )
 
@@ -228,10 +245,14 @@ fun GeoTuttiViewLoaded(
 
             EnableDisabledListItem(
                 step = R.string.step1,
-                description = R.string.permissions_while_using_the_app,
-                rationale = R.string.permissions_while_using_the_app_rationale,
+                description = stringResource(
+                    id = R.string.permissions_while_using_the_app,
+                    appName
+                ),
+                rationale = stringResource(id = R.string.permissions_while_using_the_app_rationale),
                 listState = whileUsingAppState,
                 onClick = {
+                    requestedTime = System.currentTimeMillis()
                     locationWhileUsingApppermissionLauncher.launch(null)
                 }
             )
@@ -260,10 +281,17 @@ fun GeoTuttiViewLoaded(
 
             EnableDisabledListItem(
                 step = R.string.step2,
-                description = R.string.allow_allways_location_permission,
-                rationale = R.string.allow_allways_location_permission_rationale,
+                description = stringResource(
+                    id = R.string.allow_allways_location_permission,
+                    appName,
+                ),
+                rationale = stringResource(
+                    id = R.string.allow_allways_location_permission_rationale,
+                    allTheTime()
+                ),
                 listState = alwaysAppState,
                 onClick = {
+                    requestedTime = System.currentTimeMillis()
                     backgroundLocationPermissionsLauncher.launch(null)
                 }
             )
@@ -273,10 +301,10 @@ fun GeoTuttiViewLoaded(
         if (locationNotUpdatedError.value) {
             val context = LocalContext.current
             CommonAlertDialog(
-                title = R.string.permissions_error_title,
-                text = R.string.permissions_error_description,
-                confirmButton = R.string.open_settings,
-                dismissButton = R.string.cancel,
+                title = stringResource(R.string.permissions_error_title, appName),
+                text = stringResource(id = R.string.permissions_error_description, allTheTime()),
+                confirmButton = stringResource(R.string.open_settings),
+                dismissButton = stringResource(R.string.cancel),
                 dismiss = {
                     locationNotUpdatedError.value = false
                 },
@@ -285,6 +313,15 @@ fun GeoTuttiViewLoaded(
                 }
             )
         }
+    }
+}
+
+@Composable
+private fun allTheTime(): String {
+    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        LocalContext.current.packageManager.backgroundPermissionOptionLabel.toString()
+    } else {
+        stringResource(id = R.string.all_the_time)
     }
 }
 

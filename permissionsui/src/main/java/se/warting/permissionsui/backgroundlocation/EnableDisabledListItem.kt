@@ -19,7 +19,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 
@@ -27,15 +26,13 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun EnableDisabledListItem(
     @StringRes step: Int,
-    @StringRes description: Int,
-    @StringRes rationale: Int,
+    description: String,
+    rationale: String,
     listState: ListState,
     onClick: () -> Unit,
 ) {
     val iconColor = iconColorFromListState(listState)
     val alphaFromState = alphaFromListState(listState)
-
-    val appName = getApplicationName(LocalContext.current)
 
     CompositionLocalProvider(LocalContentAlpha provides alphaFromState) {
         ListItem(
@@ -59,7 +56,7 @@ fun EnableDisabledListItem(
                 }
             },
             secondaryText = if (listState == ListState.EnabledRationale) {
-                { Text(stringResource(id = rationale)) }
+                { Text(rationale) }
             } else {
                 null
             },
@@ -70,7 +67,7 @@ fun EnableDisabledListItem(
             },
             text = {
                 CompositionLocalProvider(LocalContentAlpha provides alphaFromState) {
-                    Text(stringResource(id = description, appName))
+                    Text(description)
                 }
             }
         )

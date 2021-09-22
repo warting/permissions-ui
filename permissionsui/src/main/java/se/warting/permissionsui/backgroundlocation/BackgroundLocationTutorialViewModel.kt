@@ -54,6 +54,7 @@ sealed class BackgroundLocationTutorialViewEffect {
 }
 
 data class RequiredPermissions(
+    val permissionsNeededForFineLocation: List<String>,
     val fineGpsPermission: PermissionStatus,
     val coarseGpsPermission: PermissionStatus,
     val backgroundGpsPermission: PermissionStatus?
@@ -87,7 +88,12 @@ class BackgroundLocationTutorialViewModel : ViewModel(),
                 accessCoarseLocationPermissionFlow,
                 accessBackgroundLocationPermissionFlow
             ) { a, b, c ->
-                RequiredPermissions(a, b, c)
+                RequiredPermissions(
+                    leftOf(a, b),
+                    a,
+                    b,
+                    c,
+                )
             }.collect {
                 _state.value =
                     reduce(_state.value, BackgroundLocationTutorialViewEffect.StatusUpdated(it))
@@ -104,4 +110,15 @@ class BackgroundLocationTutorialViewModel : ViewModel(),
         )
         BackgroundLocationTutorialViewEffect.Loading -> oldViewState.copy(projectName = ViewState.Loading())
     }
+}
+
+fun leftOf(a: PermissionStatus, b: PermissionStatus): List<String> {
+    val m = mutableListOf<String>()
+    if (!a.type.status.isGranted()) {
+        m.add(a.type.name)
+    }
+    if (!b.type.status.isGranted()) {
+        m.add(b.type.name)
+    }
+    return m
 }
