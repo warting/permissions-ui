@@ -37,29 +37,30 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.launch
 
-enum class ListState {
+internal enum class ListState {
     Disabled,
     Enabled,
     EnabledRationale,
     Complete,
 }
 
-data class BackgroundLocationTutorialViewState(
+internal data class BackgroundLocationTutorialViewState(
     val projectName: ViewState<RequiredPermissions> = ViewState.Loading(),
 )
 
-sealed class BackgroundLocationTutorialViewEffect {
+internal sealed class BackgroundLocationTutorialViewEffect {
     class StatusUpdated(val statuses: RequiredPermissions) : BackgroundLocationTutorialViewEffect()
     object Loading : BackgroundLocationTutorialViewEffect()
 }
 
-data class RequiredPermissions(
+internal data class RequiredPermissions(
+    val permissionsNeededForFineLocation: List<String>,
     val fineGpsPermission: PermissionStatus,
     val coarseGpsPermission: PermissionStatus,
     val backgroundGpsPermission: PermissionStatus?
 )
 
-class BackgroundLocationTutorialViewModel : ViewModel(),
+internal class BackgroundLocationTutorialViewModel : ViewModel(),
     StateViewModel<BackgroundLocationTutorialViewState, BackgroundLocationTutorialViewEffect> {
 
     private val _state =
@@ -86,8 +87,16 @@ class BackgroundLocationTutorialViewModel : ViewModel(),
                 accessFineLocationPermissionFlow,
                 accessCoarseLocationPermissionFlow,
                 accessBackgroundLocationPermissionFlow
-            ) { a, b, c ->
-                RequiredPermissions(a, b, c)
+            ) { fineGpsPermission, coarseGpsPermission, backgroundGpsPermission ->
+                RequiredPermissions(
+                    permissionsNeededForFineLocation = listOf(
+                        fineGpsPermission,
+                        coarseGpsPermission
+                    ).filter { !it.isGranted() }.map { it.type.name },
+                    fineGpsPermission = fineGpsPermission,
+                    coarseGpsPermission = coarseGpsPermission,
+                    backgroundGpsPermission = backgroundGpsPermission,
+                )
             }.collect {
                 _state.value =
                     reduce(_state.value, BackgroundLocationTutorialViewEffect.StatusUpdated(it))

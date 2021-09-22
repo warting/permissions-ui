@@ -1,34 +1,27 @@
 package se.warting.permissionsui.backgroundlocation
 
-import androidx.annotation.StringRes
 import androidx.compose.material.AlertDialog
 import androidx.compose.material.Text
 import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
 
 @SuppressWarnings("LongParameterList")
 @Composable
-fun CommonAlertDialog(
-    @StringRes title: Int,
-    @StringRes text: Int,
-    @StringRes confirmButton: Int,
-    @StringRes dismissButton: Int,
+internal fun CommonAlertDialog(
+    title: String,
+    text: String,
+    confirmButton: String,
+    dismissButton: String,
     dismiss: () -> Unit,
     confirm: () -> Unit
 ) {
-    val appName = getApplicationName(LocalContext.current)
-
     AlertDialog(
         onDismissRequest = dismiss,
         title = {
-            Text(text = stringResource(title, appName))
+            Text(title)
         },
         text = {
-            Text(
-                stringResource(text, appName)
-            )
+            Text(text)
         },
         confirmButton = {
             TextButton(
@@ -37,14 +30,14 @@ fun CommonAlertDialog(
                     dismiss()
                 }
             ) {
-                Text(stringResource(confirmButton))
+                Text(confirmButton)
             }
         },
         dismissButton = {
             TextButton(
                 onClick = dismiss
             ) {
-                Text(stringResource(dismissButton))
+                Text(dismissButton)
             }
         }
     )

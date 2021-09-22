@@ -5,12 +5,10 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.material.ContentAlpha
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
 import androidx.compose.material.LocalContentAlpha
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
@@ -19,25 +17,23 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun EnableDisabledListItem(
+internal fun EnableDisabledListItem(
     @StringRes step: Int,
-    @StringRes description: Int,
-    @StringRes rationale: Int,
+    description: String,
+    rationale: String,
     listState: ListState,
     onClick: () -> Unit,
 ) {
     val iconColor = iconColorFromListState(listState)
     val alphaFromState = alphaFromListState(listState)
 
-    val appName = getApplicationName(LocalContext.current)
-
     CompositionLocalProvider(LocalContentAlpha provides alphaFromState) {
+
         ListItem(
             modifier = if (listState == ListState.Enabled || listState == ListState.EnabledRationale) {
                 Modifier.clickable { onClick() }
@@ -59,7 +55,7 @@ fun EnableDisabledListItem(
                 }
             },
             secondaryText = if (listState == ListState.EnabledRationale) {
-                { Text(stringResource(id = rationale)) }
+                { Text(rationale) }
             } else {
                 null
             },
@@ -70,25 +66,9 @@ fun EnableDisabledListItem(
             },
             text = {
                 CompositionLocalProvider(LocalContentAlpha provides alphaFromState) {
-                    Text(stringResource(id = description, appName))
+                    Text(description)
                 }
             }
         )
     }
-}
-
-@Composable
-private fun iconColorFromListState(listState: ListState) = when (listState) {
-    ListState.Disabled -> MaterialTheme.colors.onBackground
-    ListState.Enabled -> MaterialTheme.colors.onBackground
-    ListState.EnabledRationale -> MaterialTheme.colors.onBackground
-    ListState.Complete -> MaterialTheme.colors.secondaryVariant
-}
-
-@Composable
-private fun alphaFromListState(listState: ListState) = when (listState) {
-    ListState.Disabled -> ContentAlpha.disabled
-    ListState.Enabled -> ContentAlpha.medium
-    ListState.EnabledRationale -> ContentAlpha.medium
-    ListState.Complete -> ContentAlpha.high
 }
