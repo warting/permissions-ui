@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 
 @SuppressWarnings("LongParameterList")
 @Composable
-fun CommonAlertDialog(
+internal fun CommonAlertDialog(
     title: String,
     text: String,
     confirmButton: String,

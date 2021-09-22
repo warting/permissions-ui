@@ -5,12 +5,10 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.material.ContentAlpha
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
 import androidx.compose.material.LocalContentAlpha
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
@@ -24,7 +22,7 @@ import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun EnableDisabledListItem(
+internal fun EnableDisabledListItem(
     @StringRes step: Int,
     description: String,
     rationale: String,
@@ -35,6 +33,7 @@ fun EnableDisabledListItem(
     val alphaFromState = alphaFromListState(listState)
 
     CompositionLocalProvider(LocalContentAlpha provides alphaFromState) {
+
         ListItem(
             modifier = if (listState == ListState.Enabled || listState == ListState.EnabledRationale) {
                 Modifier.clickable { onClick() }
@@ -72,20 +71,4 @@ fun EnableDisabledListItem(
             }
         )
     }
-}
-
-@Composable
-private fun iconColorFromListState(listState: ListState) = when (listState) {
-    ListState.Disabled -> MaterialTheme.colors.onBackground
-    ListState.Enabled -> MaterialTheme.colors.onBackground
-    ListState.EnabledRationale -> MaterialTheme.colors.onBackground
-    ListState.Complete -> MaterialTheme.colors.secondaryVariant
-}
-
-@Composable
-private fun alphaFromListState(listState: ListState) = when (listState) {
-    ListState.Disabled -> ContentAlpha.disabled
-    ListState.Enabled -> ContentAlpha.medium
-    ListState.EnabledRationale -> ContentAlpha.medium
-    ListState.Complete -> ContentAlpha.high
 }

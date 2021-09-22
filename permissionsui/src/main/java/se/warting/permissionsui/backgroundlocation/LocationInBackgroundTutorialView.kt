@@ -73,9 +73,9 @@ private const val PERMANENT_DENIED_TIMEOUT = 500
 @Composable
 fun LocationInBackgroundTutorialView(
     modifier: Modifier = Modifier,
-    viewModel: BackgroundLocationTutorialViewModel = viewModel(),
     permissionsApproved: () -> Unit
 ) {
+    val viewModel: BackgroundLocationTutorialViewModel = viewModel()
 
     val uiState = viewModel.uiState.collectAsState()
 
@@ -90,7 +90,7 @@ fun LocationInBackgroundTutorialView(
 }
 
 @Composable
-fun LoadingView() {
+private fun LoadingView() {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -100,14 +100,17 @@ fun LoadingView() {
     }
 }
 
-@Preview()
-@Composable
-fun LocationInBackgroundTutorialViewDarkPreview() {
+ @Preview
+ @Composable
+ internal fun LocationInBackgroundTutorialViewDarkPreview() {
     MaterialTheme {
         Surface {
             GeoTuttiViewLoaded(
                 status = RequiredPermissions(
-                    permissionsNeededForFineLocation = getRequiredPermissionsForPreciseLocation(),
+                    permissionsNeededForFineLocation = listOf(
+                        Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.ACCESS_COARSE_LOCATION,
+                    ),
                     fineGpsPermission = PermissionStatus.Granted(Permission("")),
                     coarseGpsPermission = PermissionStatus.Granted(Permission("")),
                     backgroundGpsPermission = PermissionStatus.Granted(Permission("")),
@@ -115,15 +118,9 @@ fun LocationInBackgroundTutorialViewDarkPreview() {
             )
         }
     }
-}
+ }
 
-fun getRequiredPermissionsForPreciseLocation(): List<String> =
-    listOf(
-        Manifest.permission.ACCESS_FINE_LOCATION,
-        Manifest.permission.ACCESS_COARSE_LOCATION,
-    )
-
-fun getRequiredPermissionsForGeoFencing(): List<String> =
+private fun getRequiredPermissionsForGeoFencing(): List<String> =
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
         listOf(
             Manifest.permission.ACCESS_BACKGROUND_LOCATION
@@ -135,7 +132,7 @@ fun getRequiredPermissionsForGeoFencing(): List<String> =
 @Suppress("LongMethod", "ComplexMethod")
 @Composable
 @OptIn(ExperimentalMaterialApi::class)
-fun GeoTuttiViewLoaded(
+private fun GeoTuttiViewLoaded(
     modifier: Modifier = Modifier,
     status: RequiredPermissions,
     permissionsApproved: () -> Unit = {},
@@ -340,7 +337,7 @@ private fun openSettingsForApp(context: Context) {
     context.startActivity(intent)
 }
 
-fun getApplicationName(context: Context): String {
+private fun getApplicationName(context: Context): String {
     val applicationInfo = context.applicationInfo
     val stringId = applicationInfo.labelRes
     return if (stringId == 0) applicationInfo.nonLocalizedLabel.toString() else context.getString(
