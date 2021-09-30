@@ -78,6 +78,7 @@ android {
 
 dependencies {
 
+    implementation("androidx.constraintlayout:constraintlayout:2.1.1")
     val compose_version = "1.0.3"
     implementation("androidx.core:core-ktx:1.6.0")
     implementation(project(":permissionsui"))
