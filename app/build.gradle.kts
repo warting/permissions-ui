@@ -78,7 +78,7 @@ android {
 
 dependencies {
 
-    val compose_version = "1.0.1"
+    val compose_version = "1.0.3"
     implementation("androidx.core:core-ktx:1.6.0")
     implementation(project(":permissionsui"))
     implementation("androidx.appcompat:appcompat:1.3.1")
