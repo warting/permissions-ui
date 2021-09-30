@@ -2,6 +2,9 @@ name: Pull request workflow
 
 on:
   pull_request:
+    types: [opened, synchronize, edited, reopened]
+    branches: 
+      - main
 
 jobs:
   # This workflow contains a single job called "build"
