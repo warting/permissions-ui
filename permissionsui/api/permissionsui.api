@@ -25,3 +25,22 @@ public final class se/warting/permissionsui/backgroundlocation/LocationInBackgro
 	public static final fun LocationInBackgroundTutorialView (Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 }
 
+public final class se/warting/permissionsui/backgroundlocation/PermissionsUiContracts {
+	public static final field $stable I
+	public fun <init> ()V
+}
+
+public final class se/warting/permissionsui/backgroundlocation/PermissionsUiContracts$RequestBackgroundLocation : androidx/activity/result/contract/ActivityResultContract {
+	public static final field $stable I
+	public fun <init> ()V
+	public synthetic fun createIntent (Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
+	public fun createIntent (Landroid/content/Context;Lkotlin/Unit;)Landroid/content/Intent;
+	public fun parseResult (ILandroid/content/Intent;)Ljava/lang/Boolean;
+	public synthetic fun parseResult (ILandroid/content/Intent;)Ljava/lang/Object;
+}
+
+public final class se/warting/permissionsui/backgroundlocation/RequestBackgroundLocationActivity : androidx/activity/ComponentActivity {
+	public static final field $stable I
+	public fun <init> ()V
+}
+

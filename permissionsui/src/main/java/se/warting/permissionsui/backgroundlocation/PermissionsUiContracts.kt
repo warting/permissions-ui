@@ -24,13 +24,22 @@
 
 package se.warting.permissionsui.backgroundlocation
 
-import androidx.compose.material.ContentAlpha
-import androidx.compose.runtime.Composable
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
+import androidx.activity.result.contract.ActivityResultContract
 
-@Composable
-internal fun alphaFromListState(listState: ListState) = when (listState) {
-    ListState.Disabled -> ContentAlpha.disabled
-    ListState.Enabled -> ContentAlpha.medium
-    ListState.EnabledRationale -> ContentAlpha.medium
-    ListState.Complete -> ContentAlpha.high
+class PermissionsUiContracts {
+
+    class RequestBackgroundLocation : ActivityResultContract<Unit?, Boolean>() {
+        override fun createIntent(context: Context, input: Unit?) =
+            Intent(context, RequestBackgroundLocationActivity::class.java)
+
+        override fun parseResult(resultCode: Int, intent: Intent?): Boolean {
+            if (resultCode != Activity.RESULT_OK) {
+                return false
+            }
+            return true
+        }
+    }
 }
