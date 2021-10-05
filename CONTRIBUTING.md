@@ -16,7 +16,7 @@ Always write a clear log message for your commits. One-line messages are fine fo
 
 Start reading our code and you'll get the hang of it. We optimize for readability:
 
-  * We standard formatting
+  * We use standard formatting
   * We use detekt and lint to find bugs
   * We verify the public API during changes
   * This is open source software. Consider the people who will read your code.
