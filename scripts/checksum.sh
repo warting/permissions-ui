@@ -21,18 +21,28 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 #
-org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
-# When configured, Gradle will run in incubating parallel mode.
-# This option should only be used with decoupled projects. More details, visit
-# http://www.gradle.org/docs/current/userguide/multi_project_builds.html#sec:decoupled_projects
-# org.gradle.parallel=true
-# AndroidX package structure to make it clearer which packages are bundled with the
-# Android operating system, and which are packaged with your app"s APK
-# https://developer.android.com/topic/libraries/support-library/androidx-rn
-android.useAndroidX=true
-# Automatically convert third-party libraries to use AndroidX
-android.enableJetifier=true
-# Kotlin code style for this project: "official" or "obsolete":
-kotlin.code.style=official
 
-org.gradle.caching=true
+#!/bin/bash
+SAMPLE=$1
+RESULT_FILE=$2
+
+if [ -f $RESULT_FILE ]; then
+  rm $RESULT_FILE
+fi
+touch $RESULT_FILE
+
+checksum_file() {
+  echo $(openssl md5 $1 | awk '{print $2}')
+}
+
+FILES=()
+while read -r -d ''; do
+	FILES+=("$REPLY")
+done < <(find $SAMPLE -type f \( -name "build.gradle*" -o -name "gradle-wrapper.properties"  -o -name "robolectric.properties" \) -print0)
+
+# Loop through files and append MD5 to result file
+for FILE in ${FILES[@]}; do
+	echo $(checksum_file $FILE) >> $RESULT_FILE
+done
+# Now sort the file so that it is idempotent
+sort $RESULT_FILE -o $RESULT_FILE
