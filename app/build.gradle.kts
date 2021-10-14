@@ -27,6 +27,8 @@ plugins {
     id("kotlin-android")
 }
 
+val compose_version = "1.0.4
+
 android {
     compileSdk = 31
 
@@ -68,7 +70,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.3"
+        kotlinCompilerExtensionVersion = compose_version
     }
 
     lint {
@@ -79,7 +81,7 @@ android {
 dependencies {
 
     implementation("androidx.constraintlayout:constraintlayout:2.1.1")
-    val compose_version = "1.0.4"
+
     implementation("androidx.core:core-ktx:1.6.0")
     implementation(project(":permissionsui"))
     implementation("androidx.appcompat:appcompat:1.3.1")
