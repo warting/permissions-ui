@@ -43,6 +43,8 @@ val PUBLISH_ARTIFACT_ID by extra("permissionsui")
 
 apply(from = "${rootProject.projectDir}/gradle/publish-module.gradle")
 
+val composeVersion = "1.0.4"
+
 android {
     compileSdk = 31
 
@@ -67,7 +69,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.3"
+        kotlinCompilerExtensionVersion = composeVersion
     }
 
     kotlinOptions {
@@ -97,9 +99,6 @@ dependencies {
 
     val coroutineVersion = "1.5.2"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion")
-
-    val composeVersion = "1.0.4"
-
 
     implementation("dev.marcelpinto:permissions-compose-ktx:0.9")
 
