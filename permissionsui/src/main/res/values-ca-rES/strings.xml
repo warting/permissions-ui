@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="use_your_location_title">Use your location</string>
-    <string name="use_your_location_description">Use your location in the background to collect location while app is not used.</string>
-    <string name="use_your_location_disclaimer">%1$s will have permission to collect location data even when the app is closed or not in use.</string>
-    <string name="step1">Step 1</string>
-    <string name="permissions_while_using_the_app">Allow %1$s to use your precise location</string>
-    <string name="permissions_while_using_the_app_rationale">Precise location permission is required to request background location permission</string>
-    <string name="step2">step2</string>
-    <string name="allow_allways_location_permission">Allow %1$s to use your location in the background</string>
-    <string name="all_the_time">All the time</string>
-    <string name="allow_allways_location_permission_rationale">In the next step, select ‘%1$s’</string>
-    <string name="permissions_error_title">%1$s can\'t update permissions</string>
-    <string name="permissions_error_description">Open Settings and select the option ‘%1$s’ for location permissions</string>
-    <string name="cancel">Cancel</string>
-    <string name="open_settings">Open settings</string>
+    <string name="use_your_location_title">Utilitzeu la vostra ubicació</string>
+    <string name="use_your_location_description">Utilitzeu la vostra ubicació en segon pla per recollir la ubicació mentre no s’utilitzi l’aplicació.</string>
+    <string name="use_your_location_disclaimer">%1$s tindrà permís per recopilar dades d’ubicació fins i tot quan l’aplicació estigui tancada o no s’utilitzi.</string>
+    <string name="step1">Pas 1</string>
+    <string name="permissions_while_using_the_app">Permetre que %1$s utilitzi la vostra ubicació precisa</string>
+    <string name="permissions_while_using_the_app_rationale">Es requereix permís d’ubicació precís per sol·licitar permís d’ubicació en segon pla</string>
+    <string name="step2">pas2</string>
+    <string name="allow_allways_location_permission">Permetre que %1$s utilitzi la vostra ubicació en segon pla</string>
+    <string name="all_the_time">Tot el temps</string>
+    <string name="allow_allways_location_permission_rationale">Al pas següent, seleccioneu \"%1$s\"</string>
+    <string name="permissions_error_title">%1$s no pot actualitzar els permisos</string>
+    <string name="permissions_error_description">Obriu Configuració i seleccioneu l\'opció \"%1$s\" per obtenir permisos d\'ubicació</string>
+    <string name="cancel">Cancel · lar</string>
+    <string name="open_settings">Obre la configuració</string>
 </resources>
