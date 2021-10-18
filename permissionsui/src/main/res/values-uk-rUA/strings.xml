@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">Викор. своє місцезнаходження</string>
+    <string name="use_your_location_description">Використовуйте ваше місце розташування у фоновому режимі, щоб збирати локацію, коли програма не використовується.</string>
+    <string name="use_your_location_disclaimer">%1$s отримає дозвіл на збір даних про місцезнаходження, навіть коли програма закрита чи не використовується.</string>
+    <string name="step1">Крок 1</string>
+    <string name="permissions_while_using_the_app">Дозволити %1$s використовувати ваше точне місцезнаходження</string>
+    <string name="permissions_while_using_the_app_rationale">Потрібно вказати дозвіл на розташування для запиту дозволу на фонове місцезнаходження</string>
+    <string name="step2">крок2</string>
+    <string name="allow_allways_location_permission">Дозволити %1$s використовувати ваше місцезнаходження у фоновому режимі</string>
+    <string name="all_the_time">Весь час</string>
+    <string name="allow_allways_location_permission_rationale">У наступному кроці виберіть \'%1$s\'</string>
+    <string name="permissions_error_title">%1$s не може оновити дозволи</string>
+    <string name="permissions_error_description">Відкрийте Налаштування та виберіть \' параметру%1$s\' для прав розташування</string>
+    <string name="cancel">Скасувати</string>
+    <string name="open_settings">Відкрити налаштування</string>
+</resources>

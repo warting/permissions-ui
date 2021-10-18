@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">Sử dụng vị trí của bạn</string>
+    <string name="use_your_location_description">Sử dụng vị trí của bạn trong nền để thu thập vị trí trong khi ứng dụng không được sử dụng.</string>
+    <string name="use_your_location_disclaimer">%1$s sẽ có quyền thu thập dữ liệu vị trí ngay cả khi ứng dụng bị đóng hoặc không được sử dụng.</string>
+    <string name="step1">Bước 1</string>
+    <string name="permissions_while_using_the_app">Cho phép %1$s sử dụng vị trí chính xác của bạn</string>
+    <string name="permissions_while_using_the_app_rationale">Cần có quyền vị trí chính xác để yêu cầu quyền vị trí nền</string>
+    <string name="step2">bước 2</string>
+    <string name="allow_allways_location_permission">Cho phép %1$s sử dụng vị trí của bạn trong nền</string>
+    <string name="all_the_time">Mọi lúc</string>
+    <string name="allow_allways_location_permission_rationale">Trong bước tiếp theo, hãy chọn \'%1$s\'</string>
+    <string name="permissions_error_title">%1$s không thể cập nhật quyền</string>
+    <string name="permissions_error_description">Mở Cài đặt và chọn tùy chọn \'%1$s\' cho quyền vị trí</string>
+    <string name="cancel">Hủy bỏ</string>
+    <string name="open_settings">Mở cài đặt</string>
+</resources>

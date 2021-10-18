@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">Χρησιμοποιήστε την τοποθεσία σας</string>
+    <string name="use_your_location_description">Χρησιμοποιήστε την τοποθεσία σας στο παρασκήνιο για να συλλέξετε την τοποθεσία ενώ δεν χρησιμοποιείται η εφαρμογή.</string>
+    <string name="use_your_location_disclaimer">%1$s θα έχει άδεια να συλλέγει δεδομένα τοποθεσίας ακόμη και όταν η εφαρμογή είναι κλειστή ή δεν χρησιμοποιείται.</string>
+    <string name="step1">Βήμα 1</string>
+    <string name="permissions_while_using_the_app">Επιτρέψτε στο %1$s να χρησιμοποιήσει την ακριβή τοποθεσία σας</string>
+    <string name="permissions_while_using_the_app_rationale">Απαιτείται ακριβής άδεια τοποθεσίας για να ζητηθεί άδεια τοποθεσίας στο παρασκήνιο</string>
+    <string name="step2">βήμα2</string>
+    <string name="allow_allways_location_permission">Επιτρέψτε στο %1$s να χρησιμοποιήσει την τοποθεσία σας στο παρασκήνιο</string>
+    <string name="all_the_time">Όλη την ώρα</string>
+    <string name="allow_allways_location_permission_rationale">Στο επόμενο βήμα, επιλέξτε ‘%1$s’</string>
+    <string name="permissions_error_title">%1$s δεν μπορεί να ενημερώσει τα δικαιώματα</string>
+    <string name="permissions_error_description">Ανοίξτε τις Ρυθμίσεις και επιλέξτε την επιλογή ‘%1$s’ για δικαιώματα τοποθεσίας</string>
+    <string name="cancel">Ακύρωση</string>
+    <string name="open_settings">Άνοιγμα ρυθμίσεων</string>
+</resources>

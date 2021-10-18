@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">Користите своју локацију</string>
+    <string name="use_your_location_description">Користите своју локацију у позадини за прикупљање локације док се апликација не користи.</string>
+    <string name="use_your_location_disclaimer">%1$s ће имати дозволу за прикупљање података о локацији чак и када је апликација затворена или се не користи.</string>
+    <string name="step1">Корак 1</string>
+    <string name="permissions_while_using_the_app">Дозволите %1$s да користи вашу тачну локацију</string>
+    <string name="permissions_while_using_the_app_rationale">За тражење дозволе за позадинску локацију потребна је прецизна дозвола за локацију</string>
+    <string name="step2">корак 2</string>
+    <string name="allow_allways_location_permission">Дозволите %1$s да користи вашу локацију у позадини</string>
+    <string name="all_the_time">Све време</string>
+    <string name="allow_allways_location_permission_rationale">У следећем кораку изаберите „%1$s“</string>
+    <string name="permissions_error_title">%1$s не може да ажурира дозволе</string>
+    <string name="permissions_error_description">Отворите Подешавања и изаберите опцију „%1$s“ за дозволе локације</string>
+    <string name="cancel">Поништити, отказати</string>
+    <string name="open_settings">Отворите подешавања</string>
+</resources>

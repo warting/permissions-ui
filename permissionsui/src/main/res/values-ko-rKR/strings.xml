@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">내 위치 사용</string>
+    <string name="use_your_location_description">앱을 사용하지 않는 동안 백그라운드에서 위치를 사용하여 위치를 수집합니다.</string>
+    <string name="use_your_location_disclaimer">%1$s 은 앱을 닫거나 사용하지 않는 경우에도 위치 데이터를 수집할 수 있는 권한을 갖습니다.</string>
+    <string name="step1">1 단계</string>
+    <string name="permissions_while_using_the_app">%1$s 에서 내 정확한 위치를 사용하도록 허용</string>
+    <string name="permissions_while_using_the_app_rationale">백그라운드 위치 권한을 요청하려면 정확한 위치 권한이 필요합니다.</string>
+    <string name="step2">2 단계</string>
+    <string name="allow_allways_location_permission">%1$s 이 백그라운드에서 내 위치를 사용하도록 허용</string>
+    <string name="all_the_time">항상</string>
+    <string name="allow_allways_location_permission_rationale">다음 단계에서 \'%1$s\'을 선택하십시오.</string>
+    <string name="permissions_error_title">%1$s 권한을 업데이트할 수 없습니다</string>
+    <string name="permissions_error_description">설정을 열고 위치 권한에 대해%1$s\' 옵션을 선택합니다.</string>
+    <string name="cancel">취소</string>
+    <string name="open_settings">설정 열기</string>
+</resources>

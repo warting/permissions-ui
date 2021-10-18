@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">Použijte vaši polohu</string>
+    <string name="use_your_location_description">Použijte vaši polohu na pozadí pro sběr polohy, zatímco aplikace se nepoužívá.</string>
+    <string name="use_your_location_disclaimer">Uživatel %1$s bude mít oprávnění shromažďovat údaje o poloze, i když je aplikace uzavřena nebo není používána.</string>
+    <string name="step1">Krok 1</string>
+    <string name="permissions_while_using_the_app">Povolit %1$s používat přesnou polohu</string>
+    <string name="permissions_while_using_the_app_rationale">Pro vyžádání oprávnění k umístění na pozadí je vyžadováno přesné oprávnění</string>
+    <string name="step2">krok 2</string>
+    <string name="allow_allways_location_permission">Povolit %1$s používat vaši polohu na pozadí</string>
+    <string name="all_the_time">Celý čas</string>
+    <string name="allow_allways_location_permission_rationale">V dalším kroku vyberte „%1$s“</string>
+    <string name="permissions_error_title">%1$s nemůže aktualizovat oprávnění</string>
+    <string name="permissions_error_description">Otevřete nastavení a vyberte možnost „%1$s“ pro oprávnění k umístění</string>
+    <string name="cancel">Zrušit</string>
+    <string name="open_settings">Otevřít nastavení</string>
+</resources>

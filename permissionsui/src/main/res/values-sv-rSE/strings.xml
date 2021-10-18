@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">Använd din plats</string>
+    <string name="use_your_location_description">Använd din plats i bakgrunden för att samla in plats medan appen inte används.</string>
+    <string name="use_your_location_disclaimer">%1$s kommer att ha behörighet att samla in platsdata även när appen är stängd eller inte används.</string>
+    <string name="step1">Steg 1</string>
+    <string name="permissions_while_using_the_app">Tillåt %1$s att använda din exakta plats</string>
+    <string name="permissions_while_using_the_app_rationale">Exakt platsbehörighet krävs för att begära åtkomst till bakgrundsplats</string>
+    <string name="step2">Steg 2</string>
+    <string name="allow_allways_location_permission">Tillåt %1$s att använda din plats i bakgrunden</string>
+    <string name="all_the_time">Hela tiden</string>
+    <string name="allow_allways_location_permission_rationale">I nästa steg väljer du ‘%1$s’</string>
+    <string name="permissions_error_title">%1$s kan inte uppdatera behörigheter</string>
+    <string name="permissions_error_description">Öppna Inställningar och välj alternativet ‘%1$s’ för platsbehörigheter</string>
+    <string name="cancel">Avbryt</string>
+    <string name="open_settings">Öppna inställningar</string>
+</resources>
