@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="use_your_location_title">Use your location</string>
-    <string name="use_your_location_description">Use your location in the background to collect location while app is not used.</string>
-    <string name="use_your_location_disclaimer">%1$s will have permission to collect location data even when the app is closed or not in use.</string>
-    <string name="step1">Step 1</string>
-    <string name="permissions_while_using_the_app">Allow %1$s to use your precise location</string>
-    <string name="permissions_while_using_the_app_rationale">Precise location permission is required to request background location permission</string>
-    <string name="step2">step2</string>
-    <string name="allow_allways_location_permission">Allow %1$s to use your location in the background</string>
-    <string name="all_the_time">All the time</string>
-    <string name="allow_allways_location_permission_rationale">In the next step, select ‘%1$s’</string>
-    <string name="permissions_error_title">%1$s can\'t update permissions</string>
-    <string name="permissions_error_description">Open Settings and select the option ‘%1$s’ for location permissions</string>
-    <string name="cancel">Cancel</string>
-    <string name="open_settings">Open settings</string>
+    <string name="use_your_location_title">Käytä sijaintia</string>
+    <string name="use_your_location_description">Käytä sijaintiasi taustalla keräämään sijaintia, kun sovellusta ei käytetä.</string>
+    <string name="use_your_location_disclaimer">%1$s saa luvan kerätä sijaintitietoja silloinkin, kun sovellus on suljettu tai ei ole käytössä.</string>
+    <string name="step1">Vaihe 1</string>
+    <string name="permissions_while_using_the_app">Salli %1$s käyttää tarkkaa sijaintiasi</string>
+    <string name="permissions_while_using_the_app_rationale">Tarkka sijainti lupa vaaditaan pyytää taustan sijainti lupa</string>
+    <string name="step2">askel2</string>
+    <string name="allow_allways_location_permission">Salli %1$s käyttää sijaintiasi taustalla</string>
+    <string name="all_the_time">Koko ajan</string>
+    <string name="allow_allways_location_permission_rationale">Valitse seuraavassa vaiheessa ‘%1$s’</string>
+    <string name="permissions_error_title">%1$s ei voi päivittää käyttöoikeuksia</string>
+    <string name="permissions_error_description">Avaa asetukset ja valitse vaihtoehto ”%1$s” ” ” sijaintioikeudet</string>
+    <string name="cancel">Peruuta</string>
+    <string name="open_settings">Avaa asetukset</string>
 </resources>
