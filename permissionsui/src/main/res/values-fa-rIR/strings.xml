@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">از موقعیت مکانی خود استفاده کنید</string>
+    <string name="use_your_location_description">از مکان خود در پس زمینه برای جمع آوری مکان در حالی که برنامه استفاده نمی شود استفاده کنید.</string>
+    <string name="use_your_location_disclaimer">%1$s مجوز جمع آوری داده های موقعیت مکانی را خواهد داشت حتی زمانی که برنامه بسته است یا در حال استفاده نیست.</string>
+    <string name="step1">مرحله 1</string>
+    <string name="permissions_while_using_the_app">%1$s اجازه دهید از مکان دقیق شما استفاده کند</string>
+    <string name="permissions_while_using_the_app_rationale">برای درخواست مجوز مکان پس زمینه ، مجوز مکان دقیق لازم است</string>
+    <string name="step2">گام 2</string>
+    <string name="allow_allways_location_permission">%1$s اجازه دهید از موقعیت مکانی شما در پس زمینه استفاده کند</string>
+    <string name="all_the_time">همیشه</string>
+    <string name="allow_allways_location_permission_rationale">در مرحله بعد ، \"%1$s</string>
+    <string name="permissions_error_title">%1$s نمی تواند مجوزها را به روز کند</string>
+    <string name="permissions_error_description">تنظیمات را باز کرده و گزینه \"%1$s\" را برای مجوزهای مکان انتخاب کنید</string>
+    <string name="cancel">لغو کنید</string>
+    <string name="open_settings">تنظیمات را باز کنید</string>
+</resources>
