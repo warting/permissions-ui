@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="use_your_location_title">Use your location</string>
-    <string name="use_your_location_description">Use your location in the background to collect location while app is not used.</string>
-    <string name="use_your_location_disclaimer">%1$s will have permission to collect location data even when the app is closed or not in use.</string>
-    <string name="step1">Step 1</string>
-    <string name="permissions_while_using_the_app">Allow %1$s to use your precise location</string>
-    <string name="permissions_while_using_the_app_rationale">Precise location permission is required to request background location permission</string>
-    <string name="step2">step2</string>
-    <string name="allow_allways_location_permission">Allow %1$s to use your location in the background</string>
-    <string name="all_the_time">All the time</string>
-    <string name="allow_allways_location_permission_rationale">In the next step, select ‘%1$s’</string>
-    <string name="permissions_error_title">%1$s can\'t update permissions</string>
-    <string name="permissions_error_description">Open Settings and select the option ‘%1$s’ for location permissions</string>
-    <string name="cancel">Cancel</string>
-    <string name="open_settings">Open settings</string>
+    <string name="use_your_location_title">Użyj swojej lokalizacji</string>
+    <string name="use_your_location_description">Użyj swojej lokalizacji w tle, aby zbierać lokalizację, gdy aplikacja nie jest używana.</string>
+    <string name="use_your_location_disclaimer">%1$s będzie miał uprawnienia do zbierania danych o lokalizacji nawet wtedy, gdy aplikacja jest zamknięta lub nie jest używana.</string>
+    <string name="step1">Krok 1</string>
+    <string name="permissions_while_using_the_app">Pozwól %1$s na używanie dokładnej lokalizacji</string>
+    <string name="permissions_while_using_the_app_rationale">Dokładne pozwolenie na lokalizację jest wymagane do zażądania zezwolenia na lokalizację w tle</string>
+    <string name="step2">krok 2</string>
+    <string name="allow_allways_location_permission">Pozwól %1$s na używanie Twojej lokalizacji w tle</string>
+    <string name="all_the_time">Cały czas</string>
+    <string name="allow_allways_location_permission_rationale">W następnym kroku wybierz „%1$s”</string>
+    <string name="permissions_error_title">%1$s nie może zaktualizować uprawnień</string>
+    <string name="permissions_error_description">Otwórz Ustawienia i wybierz opcję „%1$s” dla uprawnień do lokalizacji</string>
+    <string name="cancel">Anuluj</string>
+    <string name="open_settings">Otwórz ustawienia</string>
 </resources>
