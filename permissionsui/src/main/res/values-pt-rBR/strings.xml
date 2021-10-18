@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="use_your_location_title">Use your location</string>
-    <string name="use_your_location_description">Use your location in the background to collect location while app is not used.</string>
-    <string name="use_your_location_disclaimer">%1$s will have permission to collect location data even when the app is closed or not in use.</string>
-    <string name="step1">Step 1</string>
-    <string name="permissions_while_using_the_app">Allow %1$s to use your precise location</string>
-    <string name="permissions_while_using_the_app_rationale">Precise location permission is required to request background location permission</string>
-    <string name="step2">step2</string>
-    <string name="allow_allways_location_permission">Allow %1$s to use your location in the background</string>
-    <string name="all_the_time">All the time</string>
-    <string name="allow_allways_location_permission_rationale">In the next step, select ‘%1$s’</string>
-    <string name="permissions_error_title">%1$s can\'t update permissions</string>
-    <string name="permissions_error_description">Open Settings and select the option ‘%1$s’ for location permissions</string>
-    <string name="cancel">Cancel</string>
-    <string name="open_settings">Open settings</string>
+    <string name="use_your_location_title">Use sua localização</string>
+    <string name="use_your_location_description">Use a sua localização em segundo plano para coletar a localização enquanto o aplicativo não for usado.</string>
+    <string name="use_your_location_disclaimer">%1$s terá permissão para coletar dados de localização, mesmo quando o aplicativo estiver fechado ou não estiver em uso.</string>
+    <string name="step1">Passo 1</string>
+    <string name="permissions_while_using_the_app">Permitir que %1$s use sua localização exata</string>
+    <string name="permissions_while_using_the_app_rationale">Solicitar permissão de localização precisa para solicitar permissão de localização em segundo plano</string>
+    <string name="step2">Passo2</string>
+    <string name="allow_allways_location_permission">Permitir que %1$s use a sua localização em segundo plano</string>
+    <string name="all_the_time">O tempo todo</string>
+    <string name="allow_allways_location_permission_rationale">Na próxima etapa, selecione ‘%1$s\'</string>
+    <string name="permissions_error_title">%1$s não pode atualizar as permissões</string>
+    <string name="permissions_error_description">Abrir Configurações e selecionar a opção ‘%1$spara permissões de localização</string>
+    <string name="cancel">cancelar</string>
+    <string name="open_settings">Abrir configurações</string>
 </resources>
