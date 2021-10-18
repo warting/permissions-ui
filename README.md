@@ -1,4 +1,5 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/se.warting.permissionsui/permissionsui/badge.png)](https://maven-badges.herokuapp.com/maven-central/se.warting.permissionsui/permissionsui)
+[![Crowdin](https://badges.crowdin.net/permissions-ui/localized.svg)](https://crowdin.com/project/permissions-ui)
 
 # Permission UI
 
