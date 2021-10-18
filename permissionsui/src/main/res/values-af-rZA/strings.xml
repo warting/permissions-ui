@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="use_your_location_title">Use your location</string>
-    <string name="use_your_location_description">Use your location in the background to collect location while app is not used.</string>
-    <string name="use_your_location_disclaimer">%1$s will have permission to collect location data even when the app is closed or not in use.</string>
-    <string name="step1">Step 1</string>
-    <string name="permissions_while_using_the_app">Allow %1$s to use your precise location</string>
-    <string name="permissions_while_using_the_app_rationale">Precise location permission is required to request background location permission</string>
-    <string name="step2">step2</string>
-    <string name="allow_allways_location_permission">Allow %1$s to use your location in the background</string>
-    <string name="all_the_time">All the time</string>
-    <string name="allow_allways_location_permission_rationale">In the next step, select ‘%1$s’</string>
-    <string name="permissions_error_title">%1$s can\'t update permissions</string>
-    <string name="permissions_error_description">Open Settings and select the option ‘%1$s’ for location permissions</string>
-    <string name="cancel">Cancel</string>
-    <string name="open_settings">Open settings</string>
+    <string name="use_your_location_title">Gebruik u ligging</string>
+    <string name="use_your_location_description">Gebruik u ligging op die agtergrond om ligging te versamel terwyl die app nie gebruik word nie.</string>
+    <string name="use_your_location_disclaimer">%1$s sal toestemming hê om liggingsdata te versamel, selfs as die app gesluit is of nie gebruik word nie.</string>
+    <string name="step1">Stap 1</string>
+    <string name="permissions_while_using_the_app">Laat %1$s toe om u presiese ligging te gebruik</string>
+    <string name="permissions_while_using_the_app_rationale">Presiese liggingstoestemming is nodig om toestemming vir agtergrond -ligging aan te vra</string>
+    <string name="step2">stap 2</string>
+    <string name="allow_allways_location_permission">Laat %1$s toe om u ligging op die agtergrond te gebruik</string>
+    <string name="all_the_time">Die hele tyd</string>
+    <string name="allow_allways_location_permission_rationale">%1$s\' in die volgende stap</string>
+    <string name="permissions_error_title">%1$s kan nie toestemmings opdateer nie</string>
+    <string name="permissions_error_description">Maak Instellings oop en kies die opsie \'%1$s\' vir liggingstoestemmings</string>
+    <string name="cancel">Kanselleer</string>
+    <string name="open_settings">Maak instellings oop</string>
 </resources>
