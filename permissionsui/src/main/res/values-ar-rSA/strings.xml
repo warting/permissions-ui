@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="use_your_location_title">Use your location</string>
-    <string name="use_your_location_description">Use your location in the background to collect location while app is not used.</string>
-    <string name="use_your_location_disclaimer">%1$s will have permission to collect location data even when the app is closed or not in use.</string>
-    <string name="step1">Step 1</string>
-    <string name="permissions_while_using_the_app">Allow %1$s to use your precise location</string>
-    <string name="permissions_while_using_the_app_rationale">Precise location permission is required to request background location permission</string>
-    <string name="step2">step2</string>
-    <string name="allow_allways_location_permission">Allow %1$s to use your location in the background</string>
-    <string name="all_the_time">All the time</string>
-    <string name="allow_allways_location_permission_rationale">In the next step, select ‘%1$s’</string>
-    <string name="permissions_error_title">%1$s can\'t update permissions</string>
-    <string name="permissions_error_description">Open Settings and select the option ‘%1$s’ for location permissions</string>
-    <string name="cancel">Cancel</string>
-    <string name="open_settings">Open settings</string>
+    <string name="use_your_location_title">استخدم موقعك</string>
+    <string name="use_your_location_description">استخدم موقعك في الخلفية لجمع الموقع أثناء عدم استخدام التطبيق.</string>
+    <string name="use_your_location_disclaimer">%1$s سيكون لديه الصلاحية لجمع بيانات الموقع حتى عندما يكون التطبيق مغلقا أو غير مستخدم.</string>
+    <string name="step1">الخطوة 1</string>
+    <string name="permissions_while_using_the_app">السماح لـ %1$s باستخدام موقعك بدقة</string>
+    <string name="permissions_while_using_the_app_rationale">إذن الموقع الدقيق مطلوب لطلب إذن موقع الخلفية</string>
+    <string name="step2">خطوة 2</string>
+    <string name="allow_allways_location_permission">السماح لـ %1$s باستخدام موقعك في الخلفية</string>
+    <string name="all_the_time">كل الوقت</string>
+    <string name="allow_allways_location_permission_rationale">في الخطوة التالية، حدد \'%1$s\'</string>
+    <string name="permissions_error_title">%1$s لا يمكن تحديث الأذونات</string>
+    <string name="permissions_error_description">افتح الإعدادات وحدد الخيار \'\'%1$sلأذونات الموقع</string>
+    <string name="cancel">إلغاء</string>
+    <string name="open_settings">فتح الإعدادات</string>
 </resources>
