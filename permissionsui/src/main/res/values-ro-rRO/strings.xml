@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">Folosește locația ta</string>
+    <string name="use_your_location_description">Utilizați locația în fundal pentru a colecta locația cât timp aplicația nu este folosită.</string>
+    <string name="use_your_location_disclaimer">%1$s va avea permisiunea de a colecta date de localizare chiar și atunci când aplicația este închisă sau nu este utilizată.</string>
+    <string name="step1">Pasul 1</string>
+    <string name="permissions_while_using_the_app">Permite %1$s să utilizeze locația ta exactă</string>
+    <string name="permissions_while_using_the_app_rationale">Este necesară o permisiune precisă a locației pentru a solicita permisiunea locației de fundal</string>
+    <string name="step2">pas2</string>
+    <string name="allow_allways_location_permission">Permite %1$s să folosească locația ta în fundal</string>
+    <string name="all_the_time">Tot timpul</string>
+    <string name="allow_allways_location_permission_rationale">În pasul următor, selectați „%1$s”</string>
+    <string name="permissions_error_title">%1$s nu poate actualiza permisiunile</string>
+    <string name="permissions_error_description">Deschideți setările și selectați opțiunea \"%1$s\" pentru permisiunile de localizare</string>
+    <string name="cancel">Anulează</string>
+    <string name="open_settings">Deschideți setările</string>
+</resources>

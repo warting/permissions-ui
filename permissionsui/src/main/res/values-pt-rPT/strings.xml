@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">Use sua localização</string>
+    <string name="use_your_location_description">Use a sua localização em segundo plano para coletar a localização enquanto o aplicativo não for usado.</string>
+    <string name="use_your_location_disclaimer">%1$s terá permissão para coletar dados de localização, mesmo quando o aplicativo estiver fechado ou não estiver em uso.</string>
+    <string name="step1">Passo 1</string>
+    <string name="permissions_while_using_the_app">Permitir que %1$s use sua localização exata</string>
+    <string name="permissions_while_using_the_app_rationale">Solicitar permissão de localização precisa para solicitar permissão de localização em segundo plano</string>
+    <string name="step2">Passo2</string>
+    <string name="allow_allways_location_permission">Permitir que %1$s use a sua localização em segundo plano</string>
+    <string name="all_the_time">O tempo todo</string>
+    <string name="allow_allways_location_permission_rationale">Na próxima etapa, selecione ‘%1$s\'</string>
+    <string name="permissions_error_title">%1$s não pode atualizar as permissões</string>
+    <string name="permissions_error_description">Abrir Configurações e selecionar a opção ‘%1$spara permissões de localização</string>
+    <string name="cancel">cancelar</string>
+    <string name="open_settings">Abrir configurações</string>
+</resources>

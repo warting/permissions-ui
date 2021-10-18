@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">استخدم موقعك</string>
+    <string name="use_your_location_description">استخدم موقعك في الخلفية لجمع الموقع أثناء عدم استخدام التطبيق.</string>
+    <string name="use_your_location_disclaimer">%1$s سيكون لديه الصلاحية لجمع بيانات الموقع حتى عندما يكون التطبيق مغلقا أو غير مستخدم.</string>
+    <string name="step1">الخطوة 1</string>
+    <string name="permissions_while_using_the_app">السماح لـ %1$s باستخدام موقعك بدقة</string>
+    <string name="permissions_while_using_the_app_rationale">إذن الموقع الدقيق مطلوب لطلب إذن موقع الخلفية</string>
+    <string name="step2">خطوة 2</string>
+    <string name="allow_allways_location_permission">السماح لـ %1$s باستخدام موقعك في الخلفية</string>
+    <string name="all_the_time">كل الوقت</string>
+    <string name="allow_allways_location_permission_rationale">في الخطوة التالية، حدد \'%1$s\'</string>
+    <string name="permissions_error_title">%1$s لا يمكن تحديث الأذونات</string>
+    <string name="permissions_error_description">افتح الإعدادات وحدد الخيار \'\'%1$sلأذونات الموقع</string>
+    <string name="cancel">إلغاء</string>
+    <string name="open_settings">فتح الإعدادات</string>
+</resources>

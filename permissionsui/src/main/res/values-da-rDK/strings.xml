@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">Brug din placering</string>
+    <string name="use_your_location_description">Brug din placering i baggrunden til at indsamle placering, mens appen ikke bruges.</string>
+    <string name="use_your_location_disclaimer">%1$s vil have tilladelse til at indsamle placeringsdata, selv når appen er lukket eller ikke er i brug.</string>
+    <string name="step1">Trin 1</string>
+    <string name="permissions_while_using_the_app">Tillad %1$s at bruge din præcise placering</string>
+    <string name="permissions_while_using_the_app_rationale">Præcis placeringstilladelse kræves for at anmode om baggrundsplaceringstilladelse</string>
+    <string name="step2">trin</string>
+    <string name="allow_allways_location_permission">Tillad %1$s at bruge din placering i baggrunden</string>
+    <string name="all_the_time">Hele tiden</string>
+    <string name="allow_allways_location_permission_rationale">I det næste trin skal du vælge ‘%1$s’</string>
+    <string name="permissions_error_title">%1$s kan ikke opdatere tilladelser</string>
+    <string name="permissions_error_description">Åbn indstillinger og vælg indstillingen ‘%1$s’ for placeringstilladelser</string>
+    <string name="cancel">Annuller</string>
+    <string name="open_settings">Åbn indstillinger</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">Utiliser votre position</string>
+    <string name="use_your_location_description">Utilisez votre position en arrière-plan pour récupérer votre position tant que l\'application n\'est pas utilisée.</string>
+    <string name="use_your_location_disclaimer">%1$s aura la permission de collecter les données de localisation même lorsque l\'application est fermée ou non utilisée.</string>
+    <string name="step1">Étape 1</string>
+    <string name="permissions_while_using_the_app">Autoriser %1$s à utiliser votre position précise</string>
+    <string name="permissions_while_using_the_app_rationale">L\'autorisation de localisation précise est nécessaire pour demander l\'autorisation de localisation en arrière-plan</string>
+    <string name="step2">Etape 2</string>
+    <string name="allow_allways_location_permission">Autoriser %1$s à utiliser votre position en arrière-plan</string>
+    <string name="all_the_time">Tout le temps</string>
+    <string name="allow_allways_location_permission_rationale">Dans l\'étape suivante, sélectionnez «%1$s»</string>
+    <string name="permissions_error_title">%1$s ne peut pas mettre à jour les permissions</string>
+    <string name="permissions_error_description">Ouvrez Réglages et sélectionnez l\'option ‘%1$s’ pour les autorisations de localisation</string>
+    <string name="cancel">Abandonner</string>
+    <string name="open_settings">Ouvrir les paramètres</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">使用您的位置</string>
+    <string name="use_your_location_description">当应用未被使用时，在后台使用您的位置来收集位置。</string>
+    <string name="use_your_location_disclaimer">即使应用程序关闭或未使用，%1$s 也有权收集位置数据。</string>
+    <string name="step1">步骤1</string>
+    <string name="permissions_while_using_the_app">允许 %1$s 使用您的精确位置</string>
+    <string name="permissions_while_using_the_app_rationale">请求背景位置权限需要精准位置权限</string>
+    <string name="step2">步骤2</string>
+    <string name="allow_allways_location_permission">允许 %1$s 在后台使用您的位置</string>
+    <string name="all_the_time">全部时间</string>
+    <string name="allow_allways_location_permission_rationale">在下一步，请选择%1$s</string>
+    <string name="permissions_error_title">%1$s 不能更新权限</string>
+    <string name="permissions_error_description">打开设置并选择选项%1$s获取位置权限</string>
+    <string name="cancel">取消</string>
+    <string name="open_settings">打开设置</string>
+</resources>

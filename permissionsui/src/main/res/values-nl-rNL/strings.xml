@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">Gebruik je locatie</string>
+    <string name="use_your_location_description">Gebruik je locatie op de achtergrond om locatie te verzamelen als de app niet wordt gebruikt.</string>
+    <string name="use_your_location_disclaimer">%1$s zal toestemming hebben om locatiegegevens te verzamelen, zelfs als de app is gesloten of niet in gebruik is.</string>
+    <string name="step1">Stap 1</string>
+    <string name="permissions_while_using_the_app">Sta %1$s toe om de exacte locatie te gebruiken</string>
+    <string name="permissions_while_using_the_app_rationale">Nauwkeurige locatiemachtiging is vereist voor het aanvragen van achtergrondlocatiemachtiging</string>
+    <string name="step2">stap2</string>
+    <string name="allow_allways_location_permission">Sta %1$s toe om je locatie te gebruiken op de achtergrond</string>
+    <string name="all_the_time">De hele tijd</string>
+    <string name="allow_allways_location_permission_rationale">Selecteer in de volgende stap \'%1$s\'</string>
+    <string name="permissions_error_title">%1$s kan rechten niet bijwerken</string>
+    <string name="permissions_error_description">Open Instellingen en selecteer de optie ‘%1$s’ voor locatiemachtigingen</string>
+    <string name="cancel">annuleren</string>
+    <string name="open_settings">Instellingen openen</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="use_your_location_title">Használja a tartózkodási helyét</string>
+    <string name="use_your_location_description">Használja a tartózkodási helyét a háttérben a hely gyűjtéséhez, miközben az alkalmazást nem használja.</string>
+    <string name="use_your_location_disclaimer">%1$s akkor is jogosult lesz a helyadatok gyűjtésére, ha az alkalmazás zárva van, vagy nincs használatban.</string>
+    <string name="step1">1. lépés</string>
+    <string name="permissions_while_using_the_app">Engedélyezze a %1$s számára a pontos tartózkodási hely használatát</string>
+    <string name="permissions_while_using_the_app_rationale">Pontos helymeghatározási engedély szükséges a háttérbeli tartózkodási engedély kéréséhez</string>
+    <string name="step2">2. lépés</string>
+    <string name="allow_allways_location_permission">Engedélyezze a %1$s számára a tartózkodási helyének használatát a háttérben</string>
+    <string name="all_the_time">Mindig</string>
+    <string name="allow_allways_location_permission_rationale">A következő lépésben válassza a „%1$s” lehetőséget</string>
+    <string name="permissions_error_title">%1$s nem tudja frissíteni az engedélyeket</string>
+    <string name="permissions_error_description">Nyissa meg a Beállításokat, és válassza a „%1$s” lehetőséget a helymeghatározási engedélyekhez</string>
+    <string name="cancel">Megszünteti</string>
+    <string name="open_settings">Nyisd meg a beállításokat</string>
+</resources>
