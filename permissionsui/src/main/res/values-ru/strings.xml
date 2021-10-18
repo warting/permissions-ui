@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="use_your_location_title">Use your location</string>
-    <string name="use_your_location_description">Use your location in the background to collect location while app is not used.</string>
-    <string name="use_your_location_disclaimer">%1$s will have permission to collect location data even when the app is closed or not in use.</string>
-    <string name="step1">Step 1</string>
-    <string name="permissions_while_using_the_app">Allow %1$s to use your precise location</string>
-    <string name="permissions_while_using_the_app_rationale">Precise location permission is required to request background location permission</string>
-    <string name="step2">step2</string>
-    <string name="allow_allways_location_permission">Allow %1$s to use your location in the background</string>
-    <string name="all_the_time">All the time</string>
-    <string name="allow_allways_location_permission_rationale">In the next step, select ‘%1$s’</string>
-    <string name="permissions_error_title">%1$s can\'t update permissions</string>
-    <string name="permissions_error_description">Open Settings and select the option ‘%1$s’ for location permissions</string>
-    <string name="cancel">Cancel</string>
-    <string name="open_settings">Open settings</string>
+    <string name="use_your_location_title">Используйте ваше местоположение</string>
+    <string name="use_your_location_description">Используйте ваше местоположение в фоновом режиме, чтобы собирать местоположение, пока приложение не используется.</string>
+    <string name="use_your_location_disclaimer">%1$s будет иметь разрешение на сбор данных о местоположении, даже если приложение закрыто или не используется.</string>
+    <string name="step1">Шаг 1</string>
+    <string name="permissions_while_using_the_app">Разрешить %1$s использовать точное местоположение</string>
+    <string name="permissions_while_using_the_app_rationale">Точное местоположение требуется для запроса доступа к фоновому местоположению</string>
+    <string name="step2">Шаг 2</string>
+    <string name="allow_allways_location_permission">Разрешить %1$s использовать ваше местоположение в фоновом режиме</string>
+    <string name="all_the_time">Все время</string>
+    <string name="allow_allways_location_permission_rationale">На следующем шаге выберите ‘%1$s</string>
+    <string name="permissions_error_title">%1$s не удается обновить разрешения</string>
+    <string name="permissions_error_description">Откройте Настройки и выберите опцию ‘%1$s’ для разрешения местоположения</string>
+    <string name="cancel">Отмена</string>
+    <string name="open_settings">Открыть настройки</string>
 </resources>
