@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="use_your_location_title">Use your location</string>
-    <string name="use_your_location_description">Use your location in the background to collect location while app is not used.</string>
-    <string name="use_your_location_disclaimer">%1$s will have permission to collect location data even when the app is closed or not in use.</string>
-    <string name="step1">Step 1</string>
-    <string name="permissions_while_using_the_app">Allow %1$s to use your precise location</string>
-    <string name="permissions_while_using_the_app_rationale">Precise location permission is required to request background location permission</string>
-    <string name="step2">step2</string>
-    <string name="allow_allways_location_permission">Allow %1$s to use your location in the background</string>
-    <string name="all_the_time">All the time</string>
-    <string name="allow_allways_location_permission_rationale">In the next step, select ‘%1$s’</string>
-    <string name="permissions_error_title">%1$s can\'t update permissions</string>
-    <string name="permissions_error_description">Open Settings and select the option ‘%1$s’ for location permissions</string>
-    <string name="cancel">Cancel</string>
-    <string name="open_settings">Open settings</string>
+    <string name="use_your_location_title">Brug din placering</string>
+    <string name="use_your_location_description">Brug din placering i baggrunden til at indsamle placering, mens appen ikke bruges.</string>
+    <string name="use_your_location_disclaimer">%1$s vil have tilladelse til at indsamle placeringsdata, selv når appen er lukket eller ikke er i brug.</string>
+    <string name="step1">Trin 1</string>
+    <string name="permissions_while_using_the_app">Tillad %1$s at bruge din præcise placering</string>
+    <string name="permissions_while_using_the_app_rationale">Præcis placeringstilladelse kræves for at anmode om baggrundsplaceringstilladelse</string>
+    <string name="step2">trin</string>
+    <string name="allow_allways_location_permission">Tillad %1$s at bruge din placering i baggrunden</string>
+    <string name="all_the_time">Hele tiden</string>
+    <string name="allow_allways_location_permission_rationale">I det næste trin skal du vælge ‘%1$s’</string>
+    <string name="permissions_error_title">%1$s kan ikke opdatere tilladelser</string>
+    <string name="permissions_error_description">Åbn indstillinger og vælg indstillingen ‘%1$s’ for placeringstilladelser</string>
+    <string name="cancel">Annuller</string>
+    <string name="open_settings">Åbn indstillinger</string>
 </resources>
