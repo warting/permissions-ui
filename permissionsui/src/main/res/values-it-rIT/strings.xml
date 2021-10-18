@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="use_your_location_title">Use your location</string>
-    <string name="use_your_location_description">Use your location in the background to collect location while app is not used.</string>
-    <string name="use_your_location_disclaimer">%1$s will have permission to collect location data even when the app is closed or not in use.</string>
-    <string name="step1">Step 1</string>
-    <string name="permissions_while_using_the_app">Allow %1$s to use your precise location</string>
-    <string name="permissions_while_using_the_app_rationale">Precise location permission is required to request background location permission</string>
+    <string name="use_your_location_title">Usa la tua posizione</string>
+    <string name="use_your_location_description">Usa la tua posizione in background per raccogliere la posizione mentre l\'app non viene utilizzata.</string>
+    <string name="use_your_location_disclaimer">%1$s avrà il permesso di raccogliere dati relativi alla posizione anche quando l\'applicazione è chiusa o non è in uso.</string>
+    <string name="step1">Fase 1</string>
+    <string name="permissions_while_using_the_app">Consenti a %1$s di utilizzare la tua posizione precisa</string>
+    <string name="permissions_while_using_the_app_rationale">È richiesta un\'autorizzazione precisa per la localizzazione in background</string>
     <string name="step2">step2</string>
-    <string name="allow_allways_location_permission">Allow %1$s to use your location in the background</string>
-    <string name="all_the_time">All the time</string>
-    <string name="allow_allways_location_permission_rationale">In the next step, select ‘%1$s’</string>
-    <string name="permissions_error_title">%1$s can\'t update permissions</string>
-    <string name="permissions_error_description">Open Settings and select the option ‘%1$s’ for location permissions</string>
-    <string name="cancel">Cancel</string>
-    <string name="open_settings">Open settings</string>
+    <string name="allow_allways_location_permission">Consenti a %1$s di utilizzare la tua posizione in background</string>
+    <string name="all_the_time">Tutto il tempo</string>
+    <string name="allow_allways_location_permission_rationale">Nel passo successivo, seleziona «%1$s»</string>
+    <string name="permissions_error_title">%1$s non può aggiornare i permessi</string>
+    <string name="permissions_error_description">Apri Impostazioni e seleziona l\'opzione \'%1$s\' per i permessi di posizione</string>
+    <string name="cancel">Annulla</string>
+    <string name="open_settings">Apri impostazioni</string>
 </resources>
