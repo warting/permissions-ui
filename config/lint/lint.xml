@@ -14,5 +14,6 @@
         <ignore path="build" />
     </issue>
     <issue id="LintBaseline" severity="ignore" />
+    <issue id="TypographyQuotes" severity="ignore" />
     <issue id="all" severity="error" />
 </lint>
