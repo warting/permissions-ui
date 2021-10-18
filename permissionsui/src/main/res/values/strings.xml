@@ -11,7 +11,7 @@
     <string name="permissions_while_using_the_app_rationale">Precise location permission is required to request background location permission</string>
 
 
-    <string name="step2">step2</string>
+    <string name="step2">Step 2</string>
     <string name="allow_allways_location_permission">Allow %1$s to use your location in the background</string>
     <string name="all_the_time">All the time</string>
     <string name="allow_allways_location_permission_rationale">In the next step, select ‘%1$s’</string>
