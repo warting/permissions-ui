@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="use_your_location_title">Use your location</string>
-    <string name="use_your_location_description">Use your location in the background to collect location while app is not used.</string>
-    <string name="use_your_location_disclaimer">%1$s will have permission to collect location data even when the app is closed or not in use.</string>
-    <string name="step1">Step 1</string>
-    <string name="permissions_while_using_the_app">Allow %1$s to use your precise location</string>
-    <string name="permissions_while_using_the_app_rationale">Precise location permission is required to request background location permission</string>
-    <string name="step2">step2</string>
-    <string name="allow_allways_location_permission">Allow %1$s to use your location in the background</string>
-    <string name="all_the_time">All the time</string>
-    <string name="allow_allways_location_permission_rationale">In the next step, select ‘%1$s’</string>
-    <string name="permissions_error_title">%1$s can\'t update permissions</string>
-    <string name="permissions_error_description">Open Settings and select the option ‘%1$s’ for location permissions</string>
-    <string name="cancel">Cancel</string>
-    <string name="open_settings">Open settings</string>
+    <string name="use_your_location_title">Konumunuzu kullanın</string>
+    <string name="use_your_location_description">Uygulama kullanılmadığında konumunuzu toplamak için arka planda konumunuzu kullanın.</string>
+    <string name="use_your_location_disclaimer">%1$s , uygulama kapalıyken veya kullanımda değilken bile konum verilerini toplama iznine sahip olacaktır.</string>
+    <string name="step1">Aşama 1</string>
+    <string name="permissions_while_using_the_app">%1$s kesin konumunuzu kullanmasına izin verin</string>
+    <string name="permissions_while_using_the_app_rationale">Arka planda konum izni istemek için kesin konum izni gereklidir</string>
+    <string name="step2">Adım 2</string>
+    <string name="allow_allways_location_permission">%1$s konumunuzu arka planda kullanmasına izin verin</string>
+    <string name="all_the_time">Her zaman</string>
+    <string name="allow_allways_location_permission_rationale">Bir sonraki adımda, \'%1$s\' seçin</string>
+    <string name="permissions_error_title">%1$s izinleri güncelleyemiyor</string>
+    <string name="permissions_error_description">Ayarlar\'ı açın ve konum izinleri için%1$s</string>
+    <string name="cancel">İptal</string>
+    <string name="open_settings">Ayarları aç</string>
 </resources>
