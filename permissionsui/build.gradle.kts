@@ -54,9 +54,16 @@ android {
     }
 
     lint {
-        lintConfig = file("$rootDir/config/lint/lint.xml")
-        lintConfig = file("$rootDir/config/lint/lint.xml")
-        //baseline(file("lint-baseline.xml"))
+        baseline(file("lint-baseline.xml"))
+        isCheckReleaseBuilds = true
+        isCheckAllWarnings = true
+        isWarningsAsErrors = true
+        isAbortOnError = true
+        disable.add("GradleDependency")
+        disable.add("TypographyQuotes")
+        isCheckDependencies = true
+        isCheckGeneratedSources = false
+        sarifOutput = file("../lint-results-permissionui.sarif")
     }
 }
 
