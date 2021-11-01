@@ -1,7 +1,7 @@
 
 
 <resources>
-    <string name="app_name">Permission UI</string>
-    <string name="request_permissions">Request permissions</string>
-    <string name="permissions_granted">Permissions granted: %1s</string>
+    <string name="app_name" translatable="false">Permission UI</string>
+    <string name="request_permissions" translatable="false">Request permissions</string>
+    <string name="permissions_granted"  translatable="false">Permissions granted: %1s</string>
 </resources>

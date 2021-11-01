@@ -1,5 +1,3 @@
-
-
 package se.warting.backgroundlocationpermissionrationale.ui.theme
 
 import androidx.compose.material.MaterialTheme
@@ -11,6 +9,6 @@ fun BackgroundLocationPermissionRationaleTheme(
 ) {
 
     MaterialTheme(
-        content = content
+        content = content,
     )
 }
