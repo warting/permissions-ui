@@ -35,6 +35,8 @@ val gitOrLocalVersion: String =
     com.android.build.gradle.internal.cxx.configure.gradleLocalProperties(rootDir)
         .getProperty("VERSION_NAME", androidGitVersion.name().replace("v", ""))
 
+version = gitOrLocalVersion
+
 apiValidation {
     ignoredProjects.add("app")
 }
