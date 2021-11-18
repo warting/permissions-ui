@@ -66,7 +66,7 @@ android {
 
 dependencies {
 
-    implementation("androidx.constraintlayout:constraintlayout:2.1.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.2")
 
     implementation("androidx.core:core-ktx:1.7.0")
     implementation(project(":permissionsui"))
