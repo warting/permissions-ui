@@ -8,7 +8,7 @@
 //}
 
 plugins {
-    id("com.gradle.enterprise") version "3.8"
+    id("com.gradle.enterprise") version "3.8.1"
 }
 
 buildCache {
