@@ -72,8 +72,8 @@ afterEvaluate {
                     }
 
                     scm {
-                        connection = 'scm:git@github.com:wartiong/permissions-ui.git'
-                        developerConnection = 'scm:git:ssh://github.com/wartiong/permissions-ui.git'
+                        connection = 'scm:git@github.com:warting/permissions-ui.git'
+                        developerConnection = 'scm:git:ssh://github.com/warting/permissions-ui.git'
                         url = 'https://github.com/warting/permissions-ui/tree/main'
                     }
                 }
