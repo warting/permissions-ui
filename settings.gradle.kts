@@ -23,4 +23,4 @@ buildCache {
 }
 
 rootProject.name = "Background Location Permission Rationale"
-include(":app", ":permissionsui")
+include(":app",":appjava", ":permissionsui")
