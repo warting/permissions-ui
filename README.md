@@ -76,6 +76,9 @@ class MainActivity : ComponentActivity() {
     }
 }
 ```
+
+If you are not using compose in your app you can use `PermissionsUiContracts.RequestBackgroundLocation` See: [kotlin sample](app/src/main/java/se/warting/backgroundlocationpermissionrationale/ResultingActivity.kt) or [java sample](appjava/src/main/java/se/warting/backgroundlocationpermissionrationale/MainActivity.java)
+
 For a full implementation see: [Full sample](app/src/main/java/se/warting/backgroundlocationpermissionrationale/MainActivity.kt)
 
 ## Notes
