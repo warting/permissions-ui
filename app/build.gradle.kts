@@ -5,7 +5,7 @@ plugins {
     id("kotlin-android")
 }
 
-val composeVersion = "1.2.0-alpha06"
+val composeVersion = "1.2.0-alpha07"
 
 android {
     compileSdk = 31
