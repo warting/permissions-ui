@@ -1,5 +1,3 @@
-
-
 package se.warting.permissionsui.backgroundlocation
 
 import android.Manifest
@@ -51,19 +49,32 @@ private const val PERMANENT_DENIED_TIMEOUT = 500
 @Composable
 fun LocationInBackgroundTutorialView(
     modifier: Modifier = Modifier,
-    permissionsApproved: () -> Unit
+    permissionsApproved: () -> Unit = {},
+    content: (@Composable () -> Unit)? = null,
 ) {
-    val viewModel: BackgroundLocationTutorialViewModel = viewModel()
 
-    val uiState = viewModel.uiState.collectAsState()
+    val permissionsApprovedState = remember {
+        mutableStateOf(false)
+    }
 
-    when (val state = uiState.value.projectName) {
-        is ViewState.Loading -> LoadingView()
-        is ViewState.Success -> GeoTuttiViewLoaded(
-            modifier = modifier,
-            status = state.data,
-            permissionsApproved = permissionsApproved
-        )
+    if (content != null && permissionsApprovedState.value) {
+        content()
+    } else {
+        val viewModel: BackgroundLocationTutorialViewModel = viewModel()
+
+        val uiState = viewModel.uiState.collectAsState()
+
+        when (val state = uiState.value.projectName) {
+            is ViewState.Loading -> LoadingView()
+            is ViewState.Success -> GeoTuttiViewLoaded(
+                modifier = modifier,
+                status = state.data,
+                permissionsApproved = {
+                    permissionsApproved()
+                    permissionsApprovedState.value = true
+                }
+            )
+        }
     }
 }
 
@@ -78,9 +89,9 @@ private fun LoadingView() {
     }
 }
 
- @Preview
- @Composable
- internal fun LocationInBackgroundTutorialViewDarkPreview() {
+@Preview
+@Composable
+internal fun LocationInBackgroundTutorialViewDarkPreview() {
     MaterialTheme {
         Surface {
             GeoTuttiViewLoaded(
@@ -96,7 +107,7 @@ private fun LoadingView() {
             )
         }
     }
- }
+}
 
 private fun getRequiredPermissionsForGeoFencing(): List<String> =
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {

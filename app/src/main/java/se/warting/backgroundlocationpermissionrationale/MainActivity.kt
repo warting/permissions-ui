@@ -1,5 +1,3 @@
-
-
 package se.warting.backgroundlocationpermissionrationale
 
 import android.os.Bundle
@@ -9,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Snackbar
 import androidx.compose.material.SnackbarHost
+import androidx.compose.material.Text
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
@@ -42,10 +41,14 @@ fun Main() {
                 }
             },
             content = { innerPadding ->
-                LocationInBackgroundTutorialView(Modifier.padding(innerPadding)) {
-                    scope.launch {
-                        scaffoldState.snackbarHostState.showSnackbar("Permissions approved!")
-                    }
+                LocationInBackgroundTutorialView(
+                    modifier = Modifier.padding(innerPadding),
+                    permissionsApproved = {
+                        scope.launch {
+                            scaffoldState.snackbarHostState.showSnackbar("Permissions approved!")
+                        }
+                    }) {
+                    Text("Permissions approved!")
                 }
             }
         )
