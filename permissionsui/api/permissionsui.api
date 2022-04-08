@@ -22,7 +22,7 @@ public final class se/warting/permissionsui/backgroundlocation/ComposableSinglet
 }
 
 public final class se/warting/permissionsui/backgroundlocation/LocationInBackgroundTutorialViewKt {
-	public static final fun LocationInBackgroundTutorialView (Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+	public static final fun LocationInBackgroundTutorialView (Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class se/warting/permissionsui/backgroundlocation/PermissionsUiContracts {
