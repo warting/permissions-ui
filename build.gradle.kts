@@ -12,7 +12,7 @@ buildscript {
     dependencies {
         classpath("com.android.tools.build:gradle:7.1.3")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
-        classpath("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.19.0")
+        classpath("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.20.0")
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -23,7 +23,7 @@ plugins {
     id("com.github.ben-manes.versions") version "0.42.0"
     id("io.gitlab.arturbosch.detekt") version "1.19.0"
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
-    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.8.0"
+    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.9.0"
     id("com.gladed.androidgitversion") version "0.4.14"
 }
 
