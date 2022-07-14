@@ -76,7 +76,7 @@ kotlin {
 dependencies {
 
 
-    val coroutineVersion = "1.6.1"
+    val coroutineVersion = "1.6.4"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion")
 
     implementation("dev.marcelpinto:permissions-compose-ktx:0.9")
