@@ -91,7 +91,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling:$composeVersion")
     implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
     implementation("androidx.compose.ui:ui-text:$composeVersion")
-    implementation("androidx.activity:activity-compose:1.4.0")
+    implementation("androidx.activity:activity-compose:1.6.0")
 
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     api("androidx.startup:startup-runtime:1.1.1")
