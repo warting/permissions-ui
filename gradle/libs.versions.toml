@@ -1,0 +1,190 @@
+[versions]
+androidx-activity = "1.6.1"
+androidx-appcompat = "1.5.1"
+androidx-arch-core = "2.1.0"
+androidx-collection = "1.1.0"
+androidx-compose-animation = "1.2.0-beta02"
+# @keep this version, kotlinCompilerExtensionVersion = libs.versions.androidx.compose.compiler.get()
+androidx-compose-compiler = "1.3.2"
+androidx-core = "1.8.0"
+androidx-emoji2 = "1.0.0"
+androidx-fragment = "1.3.6"
+androidx-savedstate = "1.2.0-rc01"
+androidx-vectordrawable = "1.1.0"
+androidxComposeBom = "2022.10.00"
+dev-marcelpinto = "0.9"
+io-gitlab-arturbosch-detekt = "1.21.0"
+org-jetbrains-dokka = "1.4.32"
+org-jetbrains-kotlinx = "1.6.1"
+ui-test-junit4 = "1.3.0"
+
+[libraries]
+androidx-activity = { module = "androidx.activity:activity", version.ref = "androidx-activity" }
+androidx-activity-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
+androidx-activity-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "androidx-activity" }
+androidx-annotation = "androidx.annotation:annotation:1.3.0"
+androidx-annotation-annotation-experimental = "androidx.annotation:annotation-experimental:1.1.0"
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
+androidx-appcompat-appcompat-resources = "androidx.appcompat:appcompat-resources:1.4.2"
+androidx-arch-core-core-common = { module = "androidx.arch.core:core-common", version.ref = "androidx-arch-core" }
+androidx-arch-core-core-runtime = { module = "androidx.arch.core:core-runtime", version.ref = "androidx-arch-core" }
+androidx-autofill = "androidx.autofill:autofill:1.0.0"
+androidx-cardview = "androidx.cardview:cardview:1.0.0"
+androidx-collection = { module = "androidx.collection:collection", version.ref = "androidx-collection" }
+androidx-collection-collection-ktx = { module = "androidx.collection:collection-ktx", version.ref = "androidx-collection" }
+androidx-compose-animation = { module = "androidx.compose.animation:animation" }
+androidx-compose-animation-animation-core = { module = "androidx.compose.animation:animation-core", version.ref = "androidx-compose-animation" }
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidxComposeBom" }
+androidx-compose-compiler = "androidx.compose.compiler:compiler:1.2.0-beta02"
+androidx-compose-foundation = { module = "androidx.compose.foundation:foundation" }
+androidx-compose-foundation-foundation-layout = { module = "androidx.compose.foundation:foundation-layout" }
+androidx-compose-material = { module = "androidx.compose.material:material" }
+androidx-compose-material-material-icons-core = { module = "androidx.compose.material:material-icons-core" }
+androidx-compose-material-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
+androidx-compose-material-material-ripple = { module = "androidx.compose.material:material-ripple" }
+androidx-compose-runtime = { module = "androidx.compose.runtime:runtime" }
+androidx-compose-runtime-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata" }
+androidx-compose-runtime-runtime-saveable = { module = "androidx.compose.runtime:runtime-saveable" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui" }
+androidx-compose-ui-ui-geometry = { module = "androidx.compose.ui:ui-geometry" }
+androidx-compose-ui-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+androidx-compose-ui-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "ui-test-junit4" }
+androidx-compose-ui-ui-text = { module = "androidx.compose.ui:ui-text" }
+androidx-compose-ui-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-compose-ui-ui-tooling-data = { module = "androidx.compose.ui:ui-tooling-data" }
+androidx-compose-ui-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+androidx-compose-ui-ui-unit = { module = "androidx.compose.ui:ui-unit" }
+androidx-compose-ui-ui-util = { module = "androidx.compose.ui:ui-util" }
+androidx-concurrent-concurrent-futures = "androidx.concurrent:concurrent-futures:1.0.0"
+androidx-constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
+androidx-constraintlayout-constraintlayout-core = "androidx.constraintlayout:constraintlayout-core:1.0.4"
+androidx-constraintlayout-constraintlayout-solver = "androidx.constraintlayout:constraintlayout-solver:2.0.1"
+androidx-coordinatorlayout = "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
+androidx-core = { module = "androidx.core:core", version.ref = "androidx-core" }
+androidx-core-core-ktx = "androidx.core:core-ktx:1.9.0"
+androidx-cursoradapter = "androidx.cursoradapter:cursoradapter:1.0.0"
+androidx-customview = "androidx.customview:customview:1.1.0"
+androidx-customview-customview-poolingcontainer = "androidx.customview:customview-poolingcontainer:1.0.0-beta02"
+androidx-databinding-viewbinding = "androidx.databinding:viewbinding:7.4.0-beta04"
+androidx-documentfile = "androidx.documentfile:documentfile:1.0.0"
+androidx-drawerlayout = "androidx.drawerlayout:drawerlayout:1.1.1"
+androidx-dynamicanimation = "androidx.dynamicanimation:dynamicanimation:1.0.0"
+androidx-emoji2 = { module = "androidx.emoji2:emoji2", version.ref = "androidx-emoji2" }
+androidx-emoji2-emoji2-views-helper = { module = "androidx.emoji2:emoji2-views-helper", version.ref = "androidx-emoji2" }
+androidx-fragment = { module = "androidx.fragment:fragment", version.ref = "androidx-fragment" }
+androidx-fragment-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "androidx-fragment" }
+androidx-interpolator = "androidx.interpolator:interpolator:1.0.0"
+androidx-legacy-legacy-support-core-utils = "androidx.legacy:legacy-support-core-utils:1.0.0"
+androidx-lifecycle-lifecycle-common = "androidx.lifecycle:lifecycle-common:2.4.1"
+androidx-lifecycle-lifecycle-common-java8 = "androidx.lifecycle:lifecycle-common-java8:2.4.1"
+androidx-lifecycle-lifecycle-extensions = "androidx.lifecycle:lifecycle-extensions:2.2.0"
+androidx-lifecycle-lifecycle-livedata = "androidx.lifecycle:lifecycle-livedata:2.2.0"
+androidx-lifecycle-lifecycle-livedata-core = "androidx.lifecycle:lifecycle-livedata-core:2.3.1"
+androidx-lifecycle-lifecycle-livedata-core-ktx = "androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1"
+androidx-lifecycle-lifecycle-process = "androidx.lifecycle:lifecycle-process:2.4.0"
+androidx-lifecycle-lifecycle-runtime = "androidx.lifecycle:lifecycle-runtime:2.4.1"
+androidx-lifecycle-lifecycle-runtime-ktx = "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+androidx-lifecycle-lifecycle-service = "androidx.lifecycle:lifecycle-service:2.2.0"
+androidx-lifecycle-lifecycle-viewmodel = "androidx.lifecycle:lifecycle-viewmodel:2.3.1"
+androidx-lifecycle-lifecycle-viewmodel-compose = "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
+androidx-lifecycle-lifecycle-viewmodel-ktx = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+androidx-lifecycle-lifecycle-viewmodel-savedstate = "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1"
+androidx-loader = "androidx.loader:loader:1.0.0"
+androidx-localbroadcastmanager = "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0"
+androidx-print = "androidx.print:print:1.0.0"
+androidx-profileinstaller = "androidx.profileinstaller:profileinstaller:1.2.0-beta02"
+androidx-recyclerview = "androidx.recyclerview:recyclerview:1.1.0"
+androidx-resourceinspection-resourceinspection-annotation = "androidx.resourceinspection:resourceinspection-annotation:1.0.0"
+androidx-savedstate = { module = "androidx.savedstate:savedstate", version.ref = "androidx-savedstate" }
+androidx-savedstate-savedstate-ktx = { module = "androidx.savedstate:savedstate-ktx", version.ref = "androidx-savedstate" }
+androidx-startup-startup-runtime = "androidx.startup:startup-runtime:1.1.1"
+androidx-test-espresso-espresso-core = "androidx.test.espresso:espresso-core:3.4.0"
+androidx-test-ext-junit = "androidx.test.ext:junit:1.1.3"
+androidx-tracing = "androidx.tracing:tracing:1.0.0"
+androidx-transition = "androidx.transition:transition:1.2.0"
+androidx-vectordrawable = { module = "androidx.vectordrawable:vectordrawable", version.ref = "androidx-vectordrawable" }
+androidx-vectordrawable-vectordrawable-animated = { module = "androidx.vectordrawable:vectordrawable-animated", version.ref = "androidx-vectordrawable" }
+androidx-versionedparcelable = "androidx.versionedparcelable:versionedparcelable:1.1.1"
+androidx-viewpager = "androidx.viewpager:viewpager:1.0.0"
+androidx-viewpager2 = "androidx.viewpager2:viewpager2:1.0.0"
+com-android-tools-build-gradle = "com.android.tools.build:gradle:7.3.1"
+com-google-android-material = "com.google.android.material:material:1.7.0"
+dev-marcelpinto-permissions-compose-ktx = { module = "dev.marcelpinto:permissions-compose-ktx", version.ref = "dev-marcelpinto" }
+dev-marcelpinto-permissions-ktx = { module = "dev.marcelpinto:permissions-ktx", version.ref = "dev-marcelpinto" }
+io-gitlab-arturbosch-detekt-detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "io-gitlab-arturbosch-detekt" }
+io-gitlab-arturbosch-detekt-detekt-gradle-plugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "io-gitlab-arturbosch-detekt" }
+junit = "junit:junit:4.13.2"
+org-apache-logging-log4j-log4j-core = "org.apache.logging.log4j:log4j-core:2.19.0"
+org-jacoco-org-jacoco-ant = "org.jacoco:org.jacoco.ant:0.8.7"
+org-jetbrains-annotations = "org.jetbrains:annotations:13.0"
+org-jetbrains-dokka-dokka-base = { module = "org.jetbrains.dokka:dokka-base", version.ref = "org-jetbrains-dokka" }
+org-jetbrains-dokka-javadoc-plugin = { module = "org.jetbrains.dokka:javadoc-plugin", version.ref = "org-jetbrains-dokka" }
+org-jetbrains-kotlin-kotlin-gradle-plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"
+org-jetbrains-kotlin-kotlin-reflect = "org.jetbrains.kotlin:kotlin-reflect:1.5.31"
+org-jetbrains-kotlin-kotlin-stdlib = "org.jetbrains.kotlin:kotlin-stdlib:1.7.20"
+org-jetbrains-kotlin-kotlin-stdlib-common = "org.jetbrains.kotlin:kotlin-stdlib-common:1.7.20"
+org-jetbrains-kotlin-kotlin-stdlib-jdk7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20"
+org-jetbrains-kotlin-kotlin-stdlib-jdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20"
+org-jetbrains-kotlinx-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "org-jetbrains-kotlinx" }
+org-jetbrains-kotlinx-kotlinx-coroutines-bom = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-bom", version.ref = "org-jetbrains-kotlinx" }
+org-jetbrains-kotlinx-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "org-jetbrains-kotlinx" }
+org-jetbrains-kotlinx-kotlinx-coroutines-core-jvm = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm", version.ref = "org-jetbrains-kotlinx" }
+
+[plugins]
+android = "android:7.3.1"
+android-library = "android-library:7.3.1"
+android-reporting = "android-reporting:7.3.1"
+com-android-application = "com.android.application:7.3.1"
+com-android-asset-pack = "com.android.asset-pack:7.3.1"
+com-android-asset-pack-bundle = "com.android.asset-pack-bundle:7.3.1"
+com-android-base = "com.android.base:7.3.1"
+com-android-dynamic-feature = "com.android.dynamic-feature:7.3.1"
+com-android-internal-application = "com.android.internal.application:7.3.1"
+com-android-internal-asset-pack = "com.android.internal.asset-pack:7.3.1"
+com-android-internal-asset-pack-bundle = "com.android.internal.asset-pack-bundle:7.3.1"
+com-android-internal-dynamic-feature = "com.android.internal.dynamic-feature:7.3.1"
+com-android-internal-library = "com.android.internal.library:7.3.1"
+com-android-internal-reporting = "com.android.internal.reporting:7.3.1"
+com-android-internal-test = "com.android.internal.test:7.3.1"
+com-android-internal-version-check = "com.android.internal.version-check:7.3.1"
+com-android-library = "com.android.library:7.3.1"
+com-android-lint = "com.android.lint:7.3.1"
+com-android-reporting = "com.android.reporting:7.3.1"
+com-android-test = "com.android.test:7.3.1"
+com-github-ben-manes-versions = "com.github.ben-manes.versions:0.43.0"
+com-gladed-androidgitversion = "com.gladed.androidgitversion:0.4.14"
+io-github-gradle-nexus-publish-plugin = "io.github.gradle-nexus.publish-plugin:1.1.0"
+io-gitlab-arturbosch-detekt = "io.gitlab.arturbosch.detekt:1.21.0"
+kotlin = "kotlin:1.6.21"
+kotlin-android = "kotlin-android:1.6.21"
+kotlin-android-extensions = "kotlin-android-extensions:1.6.21"
+kotlin-dce-js = "kotlin-dce-js:1.6.21"
+kotlin-kapt = "kotlin-kapt:1.6.21"
+kotlin-multiplatform = "kotlin-multiplatform:1.6.21"
+kotlin-native-cocoapods = "kotlin-native-cocoapods:1.6.21"
+kotlin-native-performance = "kotlin-native-performance:1.6.21"
+kotlin-parcelize = "kotlin-parcelize:1.6.21"
+kotlin-platform-android = "kotlin-platform-android:1.6.21"
+kotlin-platform-common = "kotlin-platform-common:1.6.21"
+kotlin-platform-js = "kotlin-platform-js:1.6.21"
+kotlin-platform-jvm = "kotlin-platform-jvm:1.6.21"
+kotlin-scripting = "kotlin-scripting:1.6.21"
+kotlin2js = "kotlin2js:1.6.21"
+nl-littlerobots-version-catalog-update = "nl.littlerobots.version-catalog-update:0.7.0"
+org-jetbrains-dokka = "org.jetbrains.dokka:1.7.20"
+org-jetbrains-kotlin-android = "org.jetbrains.kotlin.android:1.6.21"
+org-jetbrains-kotlin-android-extensions = "org.jetbrains.kotlin.android.extensions:1.6.21"
+org-jetbrains-kotlin-js = "org.jetbrains.kotlin.js:1.6.21"
+org-jetbrains-kotlin-jvm = "org.jetbrains.kotlin.jvm:1.6.21"
+org-jetbrains-kotlin-kapt = "org.jetbrains.kotlin.kapt:1.6.21"
+org-jetbrains-kotlin-multiplatform = "org.jetbrains.kotlin.multiplatform:1.6.21"
+org-jetbrains-kotlin-multiplatform-pm20 = "org.jetbrains.kotlin.multiplatform.pm20:1.6.21"
+org-jetbrains-kotlin-native-cocoapods = "org.jetbrains.kotlin.native.cocoapods:1.6.21"
+org-jetbrains-kotlin-native-performance = "org.jetbrains.kotlin.native.performance:1.6.21"
+org-jetbrains-kotlin-platform-android = "org.jetbrains.kotlin.platform.android:1.6.21"
+org-jetbrains-kotlin-platform-common = "org.jetbrains.kotlin.platform.common:1.6.21"
+org-jetbrains-kotlin-platform-js = "org.jetbrains.kotlin.platform.js:1.6.21"
+org-jetbrains-kotlin-platform-jvm = "org.jetbrains.kotlin.platform.jvm:1.6.21"
+org-jetbrains-kotlin-plugin-parcelize = "org.jetbrains.kotlin.plugin.parcelize:1.6.21"
+org-jetbrains-kotlin-plugin-scripting = "org.jetbrains.kotlin.plugin.scripting:1.6.21"
+org-jetbrains-kotlinx-binary-compatibility-validator = "org.jetbrains.kotlinx.binary-compatibility-validator:0.12.1"

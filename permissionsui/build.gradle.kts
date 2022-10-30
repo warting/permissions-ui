@@ -5,7 +5,7 @@ plugins {
     id("kotlin-android")
     id("maven-publish")
     id("signing")
-    id("org.jetbrains.dokka") version "1.6.21"
+    id("org.jetbrains.dokka") version "1.7.20"
 }
 
 
@@ -18,11 +18,10 @@ apply(from = "${rootProject.projectDir}/gradle/publish-module.gradle")
 val composeVersion = "1.2.0-beta02"
 
 android {
-    compileSdk = 31
+    compileSdk = 33
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 31
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -41,7 +40,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = composeVersion
+        kotlinCompilerExtensionVersion = libs.versions.androidx.compose.compiler.get()
     }
 
     kotlinOptions {
@@ -65,6 +64,7 @@ android {
         checkGeneratedSources = false
         sarifOutput = file("../lint-results-permissionui.sarif")
     }
+    namespace = "se.warting.permissionsui"
 }
 
 kotlin {
@@ -74,33 +74,31 @@ kotlin {
 
 
 dependencies {
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.org.jetbrains.kotlinx.kotlinx.coroutines.android)
 
+    implementation(libs.dev.marcelpinto.permissions.compose.ktx)
 
-    val coroutineVersion = "1.6.1"
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion")
+    implementation(libs.androidx.lifecycle.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.compose.runtime)
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.foundation.foundation.layout)
+    implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.compose.material.material.icons.extended)
+    implementation(libs.androidx.compose.animation)
+    implementation(libs.androidx.compose.ui.ui.tooling)
+    implementation(libs.androidx.compose.runtime.runtime.livedata)
+    implementation(libs.androidx.compose.ui.ui.text)
+    implementation(libs.androidx.activity.activity.compose)
 
-    implementation("dev.marcelpinto:permissions-compose-ktx:0.9")
-
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1")
-    implementation("androidx.compose.runtime:runtime:$composeVersion")
-    implementation("androidx.compose.ui:ui:$composeVersion")
-    implementation("androidx.compose.foundation:foundation-layout:$composeVersion")
-    implementation("androidx.compose.material:material:$composeVersion")
-    implementation("androidx.compose.material:material-icons-extended:$composeVersion")
-    implementation("androidx.compose.animation:animation:$composeVersion")
-    implementation("androidx.compose.ui:ui-tooling:$composeVersion")
-    implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
-    implementation("androidx.compose.ui:ui-text:$composeVersion")
-    implementation("androidx.activity:activity-compose:1.4.0")
-
-    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
-    api("androidx.startup:startup-runtime:1.1.1")
-    implementation("androidx.core:core-ktx:1.8.0")
-    implementation("androidx.appcompat:appcompat:1.4.2")
-    implementation("com.google.android.material:material:1.6.1")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    implementation(libs.androidx.lifecycle.lifecycle.extensions)
+    api(libs.androidx.startup.startup.runtime)
+    implementation(libs.androidx.core.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.com.google.android.material)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.androidx.test.espresso.espresso.core)
 }
 
 

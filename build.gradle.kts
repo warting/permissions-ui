@@ -10,10 +10,10 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.2.1")
+        classpath("com.android.tools.build:gradle:7.4.0-beta04")
 
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21")
-        classpath("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.20.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20")
+        classpath("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.21.0")
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -22,6 +22,7 @@ buildscript {
 
 plugins {
     id("com.github.ben-manes.versions") version "0.42.0"
+    id("nl.littlerobots.version-catalog-update") version "0.7.0"
     id("io.gitlab.arturbosch.detekt") version "1.20.0"
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
     id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.10.1"
@@ -80,11 +81,19 @@ fun isNonStable(version: String): Boolean {
 
 tasks.named("dependencyUpdates", DependencyUpdatesTask::class.java).configure {
     rejectVersionIf {
-        isNonStable(candidate.version) && !isNonStable(currentVersion)
+        isNonStable(candidate.version)
     }
 }
 
-
+versionCatalogUpdate {
+    sortByKey.set(true)
+    keep {
+        // keep all libraries that aren't used in the project
+        keepUnusedLibraries.set(true)
+        // keep all plugins that aren't used in the project
+        keepUnusedPlugins.set(true)
+    }
+}
 task<Delete>("clean") {
     delete(rootProject.buildDir)
 }

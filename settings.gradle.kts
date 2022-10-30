@@ -22,5 +22,13 @@ buildCache {
     }
 }
 
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("libs") {
+            // from(files("../gradle/libs.versions.toml"))
+        }
+    }
+}
+
 rootProject.name = "Background Location Permission Rationale"
 include(":app",":appjava", ":permissionsui")
