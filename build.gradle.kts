@@ -25,7 +25,7 @@ plugins {
     id("nl.littlerobots.version-catalog-update") version "0.7.0"
     id("io.gitlab.arturbosch.detekt") version "1.20.0"
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
-    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.10.1"
+    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.12.1"
     id("com.gladed.androidgitversion") version "0.4.14"
 }
 
