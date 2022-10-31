@@ -47,7 +47,7 @@ allprojects {
     apply(plugin = "io.gitlab.arturbosch.detekt")
 
     dependencies {
-        detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.20.0")
+        detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.21.0")
     }
 
     detekt {
