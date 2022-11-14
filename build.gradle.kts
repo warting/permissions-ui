@@ -21,7 +21,7 @@ buildscript {
 }
 
 plugins {
-    id("com.github.ben-manes.versions") version "0.43.0"
+    id("com.github.ben-manes.versions") version "0.44.0"
     id("nl.littlerobots.version-catalog-update") version "0.7.0"
     id("io.gitlab.arturbosch.detekt") version "1.21.0"
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
