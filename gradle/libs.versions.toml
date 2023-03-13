@@ -35,7 +35,7 @@ androidx-collection-collection-ktx = { module = "androidx.collection:collection-
 androidx-compose-animation = { module = "androidx.compose.animation:animation" }
 androidx-compose-animation-animation-core = { module = "androidx.compose.animation:animation-core", version.ref = "androidx-compose-animation" }
 androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidxComposeBom" }
-androidx-compose-compiler = "androidx.compose.compiler:compiler:1.4.0"
+androidx-compose-compiler = "androidx.compose.compiler:compiler:1.4.3"
 androidx-compose-foundation = { module = "androidx.compose.foundation:foundation" }
 androidx-compose-foundation-foundation-layout = { module = "androidx.compose.foundation:foundation-layout" }
 androidx-compose-material = { module = "androidx.compose.material:material" }
