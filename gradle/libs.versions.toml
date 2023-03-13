@@ -28,7 +28,7 @@ androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "a
 androidx-appcompat-appcompat-resources = "androidx.appcompat:appcompat-resources:1.4.2"
 androidx-arch-core-core-common = { module = "androidx.arch.core:core-common", version.ref = "androidx-arch-core" }
 androidx-arch-core-core-runtime = { module = "androidx.arch.core:core-runtime", version.ref = "androidx-arch-core" }
-androidx-autofill = "androidx.autofill:autofill:1.0.0"
+androidx-autofill = "androidx.autofill:autofill:1.1.0"
 androidx-cardview = "androidx.cardview:cardview:1.0.0"
 androidx-collection = { module = "androidx.collection:collection", version.ref = "androidx-collection" }
 androidx-collection-collection-ktx = { module = "androidx.collection:collection-ktx", version.ref = "androidx-collection" }
