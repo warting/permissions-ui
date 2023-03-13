@@ -123,7 +123,7 @@ org-jetbrains-kotlin-kotlin-gradle-plugin = "org.jetbrains.kotlin:kotlin-gradle-
 org-jetbrains-kotlin-kotlin-reflect = "org.jetbrains.kotlin:kotlin-reflect:1.5.31"
 org-jetbrains-kotlin-kotlin-stdlib = "org.jetbrains.kotlin:kotlin-stdlib:1.7.20"
 org-jetbrains-kotlin-kotlin-stdlib-common = "org.jetbrains.kotlin:kotlin-stdlib-common:1.7.20"
-org-jetbrains-kotlin-kotlin-stdlib-jdk7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20"
+org-jetbrains-kotlin-kotlin-stdlib-jdk7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.10"
 org-jetbrains-kotlin-kotlin-stdlib-jdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0"
 org-jetbrains-kotlinx-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "org-jetbrains-kotlinx" }
 org-jetbrains-kotlinx-kotlinx-coroutines-bom = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-bom", version.ref = "org-jetbrains-kotlinx" }
