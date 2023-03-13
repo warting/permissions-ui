@@ -58,7 +58,7 @@ androidx-compose-ui-ui-util = { module = "androidx.compose.ui:ui-util" }
 androidx-concurrent-concurrent-futures = "androidx.concurrent:concurrent-futures:1.0.0"
 androidx-constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
 androidx-constraintlayout-constraintlayout-core = "androidx.constraintlayout:constraintlayout-core:1.0.4"
-androidx-constraintlayout-constraintlayout-solver = "androidx.constraintlayout:constraintlayout-solver:2.0.1"
+androidx-constraintlayout-constraintlayout-solver = "androidx.constraintlayout:constraintlayout-solver:2.0.4"
 androidx-coordinatorlayout = "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
 androidx-core = { module = "androidx.core:core", version.ref = "androidx-core" }
 androidx-core-core-ktx = "androidx.core:core-ktx:1.9.0"
