@@ -100,7 +100,7 @@ androidx-savedstate-savedstate-ktx = { module = "androidx.savedstate:savedstate-
 androidx-startup-startup-runtime = "androidx.startup:startup-runtime:1.1.1"
 androidx-test-espresso-espresso-core = "androidx.test.espresso:espresso-core:3.5.1"
 androidx-test-ext-junit = "androidx.test.ext:junit:1.1.5"
-androidx-tracing = "androidx.tracing:tracing:1.0.0"
+androidx-tracing = "androidx.tracing:tracing:1.1.0"
 androidx-transition = "androidx.transition:transition:1.2.0"
 androidx-vectordrawable = { module = "androidx.vectordrawable:vectordrawable", version.ref = "androidx-vectordrawable" }
 androidx-vectordrawable-vectordrawable-animated = { module = "androidx.vectordrawable:vectordrawable-animated", version.ref = "androidx-vectordrawable" }
