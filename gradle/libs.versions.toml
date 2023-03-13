@@ -66,7 +66,7 @@ androidx-cursoradapter = "androidx.cursoradapter:cursoradapter:1.0.0"
 androidx-customview = "androidx.customview:customview:1.1.0"
 androidx-customview-customview-poolingcontainer = "androidx.customview:customview-poolingcontainer:1.0.0-beta02"
 androidx-databinding-viewbinding = "androidx.databinding:viewbinding:7.4.0-beta04"
-androidx-documentfile = "androidx.documentfile:documentfile:1.0.0"
+androidx-documentfile = "androidx.documentfile:documentfile:1.0.1"
 androidx-drawerlayout = "androidx.drawerlayout:drawerlayout:1.1.1"
 androidx-dynamicanimation = "androidx.dynamicanimation:dynamicanimation:1.0.0"
 androidx-emoji2 = { module = "androidx.emoji2:emoji2", version.ref = "androidx-emoji2" }
