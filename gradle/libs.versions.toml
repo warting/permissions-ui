@@ -94,7 +94,7 @@ androidx-localbroadcastmanager = "androidx.localbroadcastmanager:localbroadcastm
 androidx-print = "androidx.print:print:1.0.0"
 androidx-profileinstaller = "androidx.profileinstaller:profileinstaller:1.2.0-beta02"
 androidx-recyclerview = "androidx.recyclerview:recyclerview:1.1.0"
-androidx-resourceinspection-resourceinspection-annotation = "androidx.resourceinspection:resourceinspection-annotation:1.0.0"
+androidx-resourceinspection-resourceinspection-annotation = "androidx.resourceinspection:resourceinspection-annotation:1.0.1"
 androidx-savedstate = { module = "androidx.savedstate:savedstate", version.ref = "androidx-savedstate" }
 androidx-savedstate-savedstate-ktx = { module = "androidx.savedstate:savedstate-ktx", version.ref = "androidx-savedstate" }
 androidx-startup-startup-runtime = "androidx.startup:startup-runtime:1.1.1"
