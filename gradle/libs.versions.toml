@@ -108,7 +108,7 @@ androidx-versionedparcelable = "androidx.versionedparcelable:versionedparcelable
 androidx-viewpager = "androidx.viewpager:viewpager:1.0.0"
 androidx-viewpager2 = "androidx.viewpager2:viewpager2:1.0.0"
 com-android-tools-build-gradle = "com.android.tools.build:gradle:7.3.1"
-com-google-android-material = "com.google.android.material:material:1.7.0"
+com-google-android-material = "com.google.android.material:material:1.8.0"
 dev-marcelpinto-permissions-compose-ktx = { module = "dev.marcelpinto:permissions-compose-ktx", version.ref = "dev-marcelpinto" }
 dev-marcelpinto-permissions-ktx = { module = "dev.marcelpinto:permissions-ktx", version.ref = "dev-marcelpinto" }
 io-gitlab-arturbosch-detekt-detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "io-gitlab-arturbosch-detekt" }
