@@ -185,6 +185,6 @@ org-jetbrains-kotlin-platform-android = "org.jetbrains.kotlin.platform.android:1
 org-jetbrains-kotlin-platform-common = "org.jetbrains.kotlin.platform.common:1.8.0"
 org-jetbrains-kotlin-platform-js = "org.jetbrains.kotlin.platform.js:1.8.0"
 org-jetbrains-kotlin-platform-jvm = "org.jetbrains.kotlin.platform.jvm:1.8.0"
-org-jetbrains-kotlin-plugin-parcelize = "org.jetbrains.kotlin.plugin.parcelize:1.8.0"
+org-jetbrains-kotlin-plugin-parcelize = "org.jetbrains.kotlin.plugin.parcelize:1.8.20"
 org-jetbrains-kotlin-plugin-scripting = "org.jetbrains.kotlin.plugin.scripting:1.8.0"
 org-jetbrains-kotlinx-binary-compatibility-validator = "org.jetbrains.kotlinx.binary-compatibility-validator:0.12.1"
