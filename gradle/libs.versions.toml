@@ -134,7 +134,7 @@ org-jetbrains-kotlinx-kotlinx-coroutines-core-jvm = { module = "org.jetbrains.ko
 android = "android:7.3.1"
 android-library = "android-library:7.3.1"
 android-reporting = "android-reporting:7.3.1"
-com-android-application = "com.android.application:7.3.1"
+com-android-application = "com.android.application:8.1.0"
 com-android-asset-pack = "com.android.asset-pack:8.0.0"
 com-android-asset-pack-bundle = "com.android.asset-pack-bundle:8.0.1"
 com-android-base = "com.android.base:7.3.1"
