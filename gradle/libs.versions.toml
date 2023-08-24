@@ -120,7 +120,7 @@ org-jetbrains-annotations = "org.jetbrains:annotations:13.0"
 org-jetbrains-dokka-dokka-base = { module = "org.jetbrains.dokka:dokka-base", version.ref = "org-jetbrains-dokka" }
 org-jetbrains-dokka-javadoc-plugin = { module = "org.jetbrains.dokka:javadoc-plugin", version.ref = "org-jetbrains-dokka" }
 org-jetbrains-kotlin-kotlin-gradle-plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0"
-org-jetbrains-kotlin-kotlin-reflect = "org.jetbrains.kotlin:kotlin-reflect:1.8.20"
+org-jetbrains-kotlin-kotlin-reflect = "org.jetbrains.kotlin:kotlin-reflect:1.9.10"
 org-jetbrains-kotlin-kotlin-stdlib = "org.jetbrains.kotlin:kotlin-stdlib:1.7.20"
 org-jetbrains-kotlin-kotlin-stdlib-common = "org.jetbrains.kotlin:kotlin-stdlib-common:1.7.20"
 org-jetbrains-kotlin-kotlin-stdlib-jdk7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20"
