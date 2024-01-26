@@ -18,7 +18,7 @@ apply(from = "${rootProject.projectDir}/gradle/publish-module.gradle")
 val composeVersion = "1.2.0-beta02"
 
 android {
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 21
@@ -31,8 +31,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     buildFeatures {
         viewBinding = true
@@ -44,7 +44,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        jvmTarget = JavaVersion.VERSION_17.toString()
         freeCompilerArgs = listOfNotNull(
             "-Xopt-in=kotlin.RequiresOptIn",
             "-Xallow-jvm-ir-dependencies",
@@ -59,6 +59,7 @@ android {
         warningsAsErrors = true
         abortOnError = true
         disable.add("GradleDependency")
+        disable.add("NewerVersionAvailable")
         disable.add("TypographyQuotes")
         checkDependencies = true
         checkGeneratedSources = false

@@ -47,7 +47,7 @@ import se.warting.permissionsui.R
 private const val PERMANENT_DENIED_TIMEOUT = 500
 
 @Composable
-fun LocationInBackgroundTutorialView(
+public fun LocationInBackgroundTutorialView(
     modifier: Modifier = Modifier,
     permissionsApproved: () -> Unit = {},
     content: (@Composable () -> Unit)? = null,

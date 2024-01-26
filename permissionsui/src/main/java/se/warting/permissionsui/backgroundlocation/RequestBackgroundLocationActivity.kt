@@ -11,7 +11,7 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
-class RequestBackgroundLocationActivity : ComponentActivity() {
+public class RequestBackgroundLocationActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

@@ -10,10 +10,9 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.4.2")
-
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20")
-        classpath("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.22.0")
+        classpath(libs.com.android.tools.build.gradle)
+        classpath(libs.org.jetbrains.kotlin.kotlin.gradle.plugin)
+        classpath(libs.io.gitlab.arturbosch.detekt.detekt.gradle.plugin)
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -21,8 +20,8 @@ buildscript {
 }
 
 plugins {
-    id("com.github.ben-manes.versions") version "0.46.0"
-    id("nl.littlerobots.version-catalog-update") version "0.7.0"
+    alias(libs.plugins.com.github.ben.manes.versions)
+    alias(libs.plugins.nl.littlerobots.version.catalog.update)
     id("io.gitlab.arturbosch.detekt") version "1.22.0"
     id("io.github.gradle-nexus.publish-plugin") version "1.3.0"
     id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.13.0"
