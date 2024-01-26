@@ -5,12 +5,12 @@ plugins {
 }
 
 android {
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "se.warting.permissionsuijava"
         minSdk = 21
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -30,8 +30,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     lint {
@@ -41,6 +41,7 @@ android {
         warningsAsErrors = true
         abortOnError = true
         disable.add("GradleDependency")
+        disable.add("NewerVersionAvailable")
         checkDependencies = true
         checkGeneratedSources = false
         sarifOutput = file("../lint-results-app.sarif")

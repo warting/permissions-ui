@@ -7,10 +7,10 @@ import android.content.Context
 import android.content.Intent
 import androidx.activity.result.contract.ActivityResultContract
 
-class PermissionsUiContracts {
+public class PermissionsUiContracts {
 
-    class RequestBackgroundLocation : ActivityResultContract<Unit?, Boolean>() {
-        override fun createIntent(context: Context, input: Unit?) =
+    public class RequestBackgroundLocation : ActivityResultContract<Unit?, Boolean>() {
+        override fun createIntent(context: Context, input: Unit?): Intent =
             Intent(context, RequestBackgroundLocationActivity::class.java)
 
         override fun parseResult(resultCode: Int, intent: Intent?): Boolean {
