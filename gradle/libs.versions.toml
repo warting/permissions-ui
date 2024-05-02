@@ -26,7 +26,7 @@ androidx-compose-ui-ui-text = { module = "androidx.compose.ui:ui-text" }
 androidx-compose-ui-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 androidx-compose-ui-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 androidx-constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
-androidx-core-core-ktx = "androidx.core:core-ktx:1.12.0"
+androidx-core-core-ktx = "androidx.core:core-ktx:1.13.1"
 androidx-lifecycle-lifecycle-extensions = "androidx.lifecycle:lifecycle-extensions:2.2.0"
 androidx-lifecycle-lifecycle-runtime-ktx = "androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"
 androidx-lifecycle-lifecycle-viewmodel-compose = "androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0"
