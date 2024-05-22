@@ -38,7 +38,7 @@ com-google-android-material = "com.google.android.material:material:1.11.0"
 dev-marcelpinto-permissions-compose-ktx = { module = "dev.marcelpinto:permissions-compose-ktx", version.ref = "dev-marcelpinto" }
 io-gitlab-arturbosch-detekt-detekt-gradle-plugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "io-gitlab-arturbosch-detekt" }
 junit = "junit:junit:4.13.2"
-org-jetbrains-kotlin-kotlin-gradle-plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22"
+org-jetbrains-kotlin-kotlin-gradle-plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.0"
 org-jetbrains-kotlinx-kotlinx-coroutines-android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0"
 
 [plugins]
