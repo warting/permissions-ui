@@ -1,7 +1,7 @@
 [versions]
 agp = "8.2.2"
 androidx-activity = "1.8.2"
-androidx-appcompat = "1.6.1"
+androidx-appcompat = "1.7.0"
 # @keep this version, kotlinCompilerExtensionVersion = libs.versions.androidx.compose.compiler.get()
 androidx-compose-compiler = "1.5.8"
 androidxComposeBom = "2023.10.01"
