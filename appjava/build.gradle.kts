@@ -5,12 +5,12 @@ plugins {
 }
 
 android {
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "se.warting.permissionsuijava"
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 

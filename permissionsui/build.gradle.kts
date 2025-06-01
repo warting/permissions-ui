@@ -18,7 +18,7 @@ apply(from = "${rootProject.projectDir}/gradle/publish-module.gradle")
 val composeVersion = "1.2.0-beta02"
 
 android {
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 21
