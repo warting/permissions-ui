@@ -42,6 +42,7 @@ android {
         abortOnError = true
         disable.add("GradleDependency")
         disable.add("NewerVersionAvailable")
+        disable.add("AndroidGradlePluginVersion")
         checkDependencies = true
         checkGeneratedSources = false
         sarifOutput = file("../lint-results-app.sarif")
