@@ -18,7 +18,7 @@ apply(from = "${rootProject.projectDir}/gradle/publish-module.gradle")
 val composeVersion = "1.2.0-beta02"
 
 android {
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 21
@@ -61,6 +61,7 @@ android {
         disable.add("GradleDependency")
         disable.add("NewerVersionAvailable")
         disable.add("TypographyQuotes")
+        disable.add("AndroidGradlePluginVersion")
         checkDependencies = true
         checkGeneratedSources = false
         sarifOutput = file("../lint-results-permissionui.sarif")
