@@ -34,7 +34,7 @@ androidx-startup-startup-runtime = "androidx.startup:startup-runtime:1.1.1"
 androidx-test-espresso-espresso-core = "androidx.test.espresso:espresso-core:3.5.1"
 androidx-test-ext-junit = "androidx.test.ext:junit:1.1.5"
 com-android-tools-build-gradle = "com.android.tools.build:gradle:8.2.2"
-com-google-android-material = "com.google.android.material:material:1.11.0"
+com-google-android-material = "com.google.android.material:material:1.13.0"
 dev-marcelpinto-permissions-compose-ktx = { module = "dev.marcelpinto:permissions-compose-ktx", version.ref = "dev-marcelpinto" }
 io-gitlab-arturbosch-detekt-detekt-gradle-plugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "io-gitlab-arturbosch-detekt" }
 junit = "junit:junit:4.13.2"
