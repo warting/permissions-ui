@@ -42,6 +42,6 @@ org-jetbrains-kotlin-kotlin-gradle-plugin = "org.jetbrains.kotlin:kotlin-gradle-
 org-jetbrains-kotlinx-kotlinx-coroutines-android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0"
 
 [plugins]
-com-github-ben-manes-versions = "com.github.ben-manes.versions:0.51.0"
+com-github-ben-manes-versions = "com.github.ben-manes.versions:0.53.0"
 
 nl-littlerobots-version-catalog-update = "nl.littlerobots.version-catalog-update:0.8.4"
