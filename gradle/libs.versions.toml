@@ -7,7 +7,7 @@ androidx-compose-compiler = "1.5.8"
 androidxComposeBom = "2023.10.01"
 dev-marcelpinto = "0.9"
 io-gitlab-arturbosch-detekt = "1.23.8"
-ui-test-junit4 = "1.10.1"
+ui-test-junit4 = "1.10.2"
 
 [libraries]
 androidx-activity = { module = "androidx.activity:activity", version.ref = "androidx-activity" }
