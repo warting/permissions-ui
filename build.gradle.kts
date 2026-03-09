@@ -1,25 +1,14 @@
 
 
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
+import java.util.Properties
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
-
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath(libs.com.android.tools.build.gradle)
-        classpath(libs.org.jetbrains.kotlin.kotlin.gradle.plugin)
-        classpath(libs.io.gitlab.arturbosch.detekt.detekt.gradle.plugin)
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
-}
 
 plugins {
+    id("com.android.application") version libs.versions.agp apply false
+    id("com.android.library") version libs.versions.agp apply false
+    id("org.jetbrains.kotlin.plugin.compose") version libs.versions.kotlin apply false
     alias(libs.plugins.com.github.ben.manes.versions)
     alias(libs.plugins.nl.littlerobots.version.catalog.update)
     id("io.gitlab.arturbosch.detekt") version "1.23.8"
@@ -32,9 +21,15 @@ androidGitVersion {
     tagPattern = "^v[0-9]+.*"
 }
 
+val localProperties = Properties().apply {
+    val localPropertiesFile = File(rootDir, "local.properties")
+    if (localPropertiesFile.exists()) {
+        localPropertiesFile.inputStream().use { load(it) }
+    }
+}
+
 val gitOrLocalVersion: String =
-    com.android.build.gradle.internal.cxx.configure.gradleLocalProperties(rootDir)
-        .getProperty("VERSION_NAME", androidGitVersion.name().replace("v", ""))
+    localProperties.getProperty("VERSION_NAME", androidGitVersion.name().replace("v", ""))
 
 version = gitOrLocalVersion
 
@@ -63,16 +58,12 @@ allprojects {
 detekt {
     autoCorrect = true
     buildUponDefaultConfig = true
-    config = files("$projectDir/config/detekt/detekt.yml")
+    config.setFrom(files("$projectDir/config/detekt/detekt.yml"))
     baseline = file("$projectDir/config/detekt/baseline.xml")
-
-    reports {
-        html.enabled = true
-    }
 }
 
 fun isNonStable(version: String): Boolean {
-    val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.toUpperCase().contains(it) }
+    val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.uppercase().contains(it) }
     val regex = "^[0-9,.v-]+(-r)?$".toRegex()
     val isStable = stableKeyword || regex.matches(version)
     return isStable.not()
@@ -86,15 +77,10 @@ tasks.named("dependencyUpdates", DependencyUpdatesTask::class.java).configure {
 
 versionCatalogUpdate {
     sortByKey.set(true)
-    keep {
-        // keep all libraries that aren't used in the project
-        keepUnusedLibraries.set(true)
-        // keep all plugins that aren't used in the project
-        keepUnusedPlugins.set(true)
-    }
 }
-task<Delete>("clean") {
-    delete(rootProject.buildDir)
+
+tasks.register<Delete>("clean") {
+    delete(layout.buildDirectory)
 }
 
 apply(from = "${rootDir}/gradle/publish-root.gradle")
