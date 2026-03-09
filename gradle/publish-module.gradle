@@ -16,12 +16,27 @@ task androidSourcesJar(type: Jar) {
     }
 }
 
+task javadocJar(type: Jar) {
+    archiveClassifier.set('javadoc')
+}
+
 artifacts {
     archives androidSourcesJar
+    archives javadocJar
 }
 
 group = PUBLISH_GROUP_ID
 version = PUBLISH_VERSION
+
+if (project.plugins.findPlugin("com.android.library")) {
+    android {
+        publishing {
+            singleVariant("release") {
+                withSourcesJar()
+            }
+        }
+    }
+}
 
 afterEvaluate {
     publishing {
@@ -32,14 +47,12 @@ afterEvaluate {
                 version PUBLISH_VERSION
 
                 if (project.plugins.findPlugin("com.android.library")) {
-                    def comp = components.findByName("release")
-                    if (comp == null) comp = components.findByName("default")
-                    if (comp != null) from comp
+                    from components.release
                 } else {
                     from components.java
                 }
 
-                artifact androidSourcesJar
+                artifact javadocJar
 
                 pom {
                     name = PUBLISH_ARTIFACT_ID
